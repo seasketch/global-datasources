@@ -25,17 +25,8 @@
     ]
   },
   {
-    "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
-    "layerName": "eez_12nm_v3",
+    "datasourceId": "eez-12nm-mr-v3",
     "geo_type": "vector",
-    "datasourceId": "eez-12nm-v3",
-    "formats": [
-      "fgb",
-      "json"
-    ],
-    "classKeys": [],
-    "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2023-09-19T01:41:11.791Z",
     "keyStats": {
       "total": {
         "total": {
@@ -45,8 +36,42 @@
         }
       }
     },
+    "formats": [
+      "fgb",
+      "json"
+    ],
+    "layerName": "eez_12nm_v3",
+    "classKeys": [],
+    "created": "2023-09-19T01:41:11.791Z",
+    "lastUpdated": "2023-09-19T19:03:03.553Z",
+    "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
     "propertiesToKeep": [
       "GEONAME"
+    ]
+  },
+  {
+    "datasourceId": "eez-with-land-mr-v3",
+    "geo_type": "vector",
+    "keyStats": {
+      "total": {
+        "total": {
+          "count": 451,
+          "sum": null,
+          "area": 298031543304328.2
+        }
+      }
+    },
+    "formats": [
+      "fgb",
+      "json"
+    ],
+    "layerName": "EEZ_Land_v3_202030",
+    "classKeys": [],
+    "created": "2023-09-19T19:00:57.405Z",
+    "lastUpdated": "2023-09-19T19:00:57.405Z",
+    "src": "data/src/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp",
+    "propertiesToKeep": [
+      "UNION"
     ]
   }
 ]
