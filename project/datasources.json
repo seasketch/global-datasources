@@ -1,22 +1,52 @@
 [
   {
-    "datasourceId": "global-clipping-osm-land",
+    "datasourceId": "eez-mr-v11",
     "geo_type": "vector",
+    "keyStats": {
+      "total": {
+        "total": {
+          "count": 357,
+          "sum": null,
+          "area": 150790271293288.84
+        }
+      }
+    },
     "formats": [
-      "subdivided"
+      "fgb",
+      "json"
     ],
+    "layerName": "eez_v11",
     "classKeys": [],
-    "propertiesToKeep": ["gid"],
-    "url": "https://d3p1dsef9f0gjr.cloudfront.net/"
+    "created": "2023-09-19T01:13:16.233Z",
+    "lastUpdated": "2023-09-19T01:13:16.233Z",
+    "src": "data/src/World_EEZ_v11_20191118/eez_v11.shp",
+    "propertiesToKeep": [
+      "GEONAME"
+    ]
   },
   {
-    "datasourceId": "global-clipping-eez-land-union",
+    "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
+    "layerName": "eez_12nm_v3",
     "geo_type": "vector",
+    "datasourceId": "eez-12nm-v3",
     "formats": [
-      "subdivided"
+      "fgb",
+      "json"
     ],
     "classKeys": [],
-    "propertiesToKeep": ["UNION"],
-    "url": "https://d3muy0hbwp5qkl.cloudfront.net"
+    "created": "2023-09-19T01:41:11.791Z",
+    "lastUpdated": "2023-09-19T01:41:11.791Z",
+    "keyStats": {
+      "total": {
+        "total": {
+          "count": 743,
+          "sum": null,
+          "area": 9239213340016.207
+        }
+      }
+    },
+    "propertiesToKeep": [
+      "GEONAME"
+    ]
   }
 ]
