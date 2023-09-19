@@ -1,0 +1,81 @@
+{
+  "name": "global-datasources",
+  "version": "4.0.0",
+  "description": "Publish global datasources for projects",
+  "main": "src/index.js",
+  "private": false,
+  "scripts": {
+    "start-data": "http-server data/dist -c-1",
+    "__test": "geoprocessing test",
+    "test": "npm run test:unit && npm run test:smoke",
+    "test:unit": "npm run __test -- --group=unit --passWithNoTests",
+    "test:unit:matching": "npm run __test -- --runInBand --group=unit --passWithNoTests -t",
+    "test:smoke": "start-server-and-test start-data 8080 'npm run __test -- --runInBand --group=smoke --silent'",
+    "test:smoke:matching": "npm run __test -- --runInBand --group=smoke -t",
+    "add:template": "geoprocessing add:template",
+    "import:data": "start-server-and-test 'http-server data/dist -c-1 -p 8001' http://localhost:8001 import:data_",
+    "import:data_": "geoprocessing import:data",
+    "reimport:data": "start-server-and-test 'http-server data/dist -c-1 -p 8001' http://localhost:8001 reimport:data_",
+    "reimport:data_": "geoprocessing reimport:data",
+    "precalc:data": "start-server-and-test 'http-server data/dist -c-1 -p 8001' http://localhost:8001 precalc:data_",
+    "precalc:data_": "geoprocessing precalc:data",
+    "publish:data": "geoprocessing publish:data",
+    "install:scripts": "mkdir -p scripts && cp -r node_modules/@seasketch/geoprocessing/dist/base-project/scripts/* scripts",
+    "translation:install": "rm -rf src/i18n/baseLang && cp -r node_modules/@seasketch/geoprocessing/dist/base-project/src/i18n/baseLang src/i18n",
+    "translation:extract": "rm -rf src/i18n/lang/en && NODE_ENV=development npx babel 'src/**/*.{ts,tsx}' > /dev/null && mv extractedTranslations/en src/i18n/lang/en && rm -rf extractedTranslations && npx ts-node scripts/extractExtraTerms.ts && echo 'Translations extracted to src/lang/en and src/i18n/extraTerms.json'",
+    "translation:publish": "npx ts-node src/i18n/bin/publishTerms.ts",
+    "translation:import": "npx ts-node src/i18n/bin/importTerms.ts",
+    "translation:sync": "npm run translation:extract && npm run translation:publish && npm run translation:import",
+    "create:function": "geoprocessing create:function",
+    "create:client": "geoprocessing create:client",
+    "start:client": "geoprocessing start:client",
+    "synth": "geoprocessing synth",
+    "bootstrap": "geoprocessing bootstrap",
+    "deploy": "geoprocessing deploy",
+    "destroy": "geoprocessing destroy",
+    "build": "geoprocessing build:lambda && geoprocessing build:client",
+    "build:client": "geoprocessing build:client",
+    "build:lambda": "geoprocessing build:lambda",
+    "start-storybook": "geoprocessing start-storybook",
+    "url": "geoprocessing url",
+    "clear-results": "geoprocessing clear-results",
+    "clear-all-results": "geoprocessing clear-all-results",
+    "prepare": "npm run translation:install"
+  },
+  "keywords": [
+    "@seasketch/geoprocessing"
+  ],
+  "dependencies": {
+    "@turf/area": "^6.5.0",
+    "@turf/bbox": "^6.5.0",
+    "@turf/bbox-clip": "^6.5.0",
+    "@turf/boolean-valid": "^6.5.0",
+    "react-i18next": "^12.2.0",
+    "@turf/combine": "^6.5.0",
+    "@turf/flatten": "^6.5.0",
+    "@turf/invariant": "^6.5.0",
+    "@turf/kinks": "^6.5.0",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "union-subdivided-polygons": "^0.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.33+5445dad",
+    "@types/request": "^2.48.8",
+    "babel-plugin-i18next-extract": "^0.9.0",
+    "request": "^2.88.2",
+    "@turf/boolean-disjoint": "^6.5.0",
+    "@turf/boolean-valid": "^6.5.0"
+  },
+  "repositoryUrl": "https://github.com/seasketch/global-datasources",
+  "author": "Tim Welch",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seasketch/global-datasources.git"
+  },
+  "homepage": "https://github.com/seasketch/global-datasources#readme",
+  "bugs": {
+    "url": "https://github.com/seasketch/global-datasources/issues"
+  }
+}

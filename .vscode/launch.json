@@ -1,0 +1,43 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "name": "Debug Tests",
+        "type": "node",
+        "request": "launch",
+        "runtimeArgs": [
+          "--inspect-brk",
+          "${workspaceRoot}/node_modules/.bin/geoprocessing",
+          "test"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "port": 9229        
+    },{
+      "name": "Debug tests - with pattern",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/geoprocessing",
+        "test",
+        "-t",
+        "${input:testNamePattern}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229        
+  }
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "testNamePattern",
+      "description": "jest -t 'regex pattern to select tests'",
+      "default": "name of my test"
+    }
+  ]
+}

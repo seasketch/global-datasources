@@ -1,0 +1,12 @@
+{
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "planningAreaType": "other",
+  "planningAreaId": "World",
+  "planningAreaName": "World",
+  "externalLinks": {}
+}

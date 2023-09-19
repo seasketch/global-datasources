@@ -1,0 +1,48 @@
+{
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": { "*.geojson": "json"},
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "*.geojson"
+      ],
+      "url": "http://json.schemastore.org/geojson"
+    }
+  ],
+  "aws.experiments": {
+    "CodeWhisperer": false
+  },
+  "i18n-ally.localesPaths": "src/i18n/lang",
+  "i18n-ally.enabledFrameworks": [
+    "react",
+    "i18next",
+    "general"
+  ],
+  "i18n-ally.namespace": true,
+  "i18n-ally.pathMatcher": "{locale}/{namespaces}.json",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.keysInUse": [
+    "description.part2_whatever"
+  ],
+  "i18n-ally.defaultNamespace": "translation"
+}
