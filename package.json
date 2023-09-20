@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
-    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.33+5445dad",
+    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.34",
     "@types/request": "^2.48.8",
     "babel-plugin-i18next-extract": "^0.9.0",
     "request": "^2.88.2",

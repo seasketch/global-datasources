@@ -18,10 +18,11 @@
     "layerName": "eez_v11",
     "classKeys": [],
     "created": "2023-09-19T01:13:16.233Z",
-    "lastUpdated": "2023-09-19T01:13:16.233Z",
+    "lastUpdated": "2023-09-20T18:14:21.933Z",
     "src": "data/src/World_EEZ_v11_20191118/eez_v11.shp",
     "propertiesToKeep": [
-      "GEONAME"
+      "GEONAME",
+      "MRGID"
     ]
   },
   {
@@ -43,10 +44,11 @@
     "layerName": "eez_12nm_v3",
     "classKeys": [],
     "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2023-09-19T19:03:03.553Z",
+    "lastUpdated": "2023-09-20T18:15:00.614Z",
     "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
     "propertiesToKeep": [
-      "GEONAME"
+      "GEONAME",
+      "MRGID_EEZ"
     ]
   },
   {
@@ -68,10 +70,11 @@
     "layerName": "EEZ_Land_v3_202030",
     "classKeys": [],
     "created": "2023-09-19T19:00:57.405Z",
-    "lastUpdated": "2023-09-19T19:00:57.405Z",
+    "lastUpdated": "2023-09-20T18:15:15.474Z",
     "src": "data/src/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp",
     "propertiesToKeep": [
-      "UNION"
+      "UNION",
+      "MRGID_EEZ"
     ]
   }
 ]
