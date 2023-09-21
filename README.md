@@ -1,13 +1,9 @@
 # Getting Started
 
-This is a geoprocessing project. It was created using the `geoprocessing init` command, as part of the tutorial to [create a new project](https://github.com/seasketch/geoprocessing/wiki/Tutorials#create-a-new-geoprocessing-project).
+Publishes datasources that have a global extent or are available for many/most countries.
 
-Once established, you can follow the tutorial to [setup an existing project on a new system](https://github.com/seasketch/geoprocessing/wiki/Tutorials#setup-an-exising-project-on-your-local-system)
+See `project/datasources.json` for the full list and metadata.
 
-## Reference Notes
+## Subdivided datasources
 
-This project uses data management [option ?](https://github.com/seasketch/geoprocessing/wiki/Tutorials#link-project-data)
-
-Data is sourced from the following locations:
-
-* ?
+The `bundle-features` command is broken in geoprocessing version 3.0 and up.  You will need `npm install` v2.2.0 of the geoprocessing library as a dependency of this project in order to publish subdivided datasources using the `bundle-features` command.  Then can then switch back when you're done.  This will be fixed in a future release.

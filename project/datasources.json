@@ -1,6 +1,6 @@
 [
   {
-    "datasourceId": "eez-mr-v11",
+    "datasourceId": "global-eez-mr-v11",
     "geo_type": "vector",
     "keyStats": {
       "total": {
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "datasourceId": "eez-12nm-mr-v3",
+    "datasourceId": "global-eez-12nm-mr-v3",
     "geo_type": "vector",
     "keyStats": {
       "total": {
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "datasourceId": "eez-with-land-mr-v3",
+    "datasourceId": "global-eez-with-land-mr-v3",
     "geo_type": "vector",
     "keyStats": {
       "total": {
