@@ -16,6 +16,8 @@
       "json"
     ],
     "layerName": "eez_v11",
+    "uniqueIdProperty": "GEONAME",
+    "displayProperty": "GEONAME",
     "classKeys": [],
     "created": "2023-09-19T01:13:16.233Z",
     "lastUpdated": "2023-09-20T18:14:21.933Z",
@@ -23,7 +25,15 @@
     "propertiesToKeep": [
       "GEONAME",
       "MRGID"
-    ]
+    ],
+    "metadata":{
+      "name": "World EEZ v11",
+      "description": "World EEZ boundaries and disputed areas",
+      "version": "3.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "2019118",
+      "publishLink": "https://marineregions.org/"
+    }
   },
   {
     "datasourceId": "global-eez-12nm-mr-v3",
@@ -42,6 +52,8 @@
       "json"
     ],
     "layerName": "eez_12nm_v3",
+    "uniqueIdProperty": "GEONAME",
+    "displayProperty": "GEONAME",
     "classKeys": [],
     "created": "2023-09-19T01:41:11.791Z",
     "lastUpdated": "2023-09-20T18:15:00.614Z",
@@ -49,7 +61,15 @@
     "propertiesToKeep": [
       "GEONAME",
       "MRGID_EEZ"
-    ]
+    ],
+    "metadata":{
+      "name": "World 12 Nautical Miles Zone (Territorial Seas) v3",
+      "description": "",
+      "version": "3.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "2019118",
+      "publishLink": "https://marineregions.org/"
+    }
   },
   {
     "datasourceId": "global-eez-with-land-mr-v3",
@@ -68,6 +88,8 @@
       "json"
     ],
     "layerName": "EEZ_Land_v3_202030",
+    "uniqueIdProperty": "UNION",
+    "displayProperty": "UNION",
     "classKeys": [],
     "created": "2023-09-19T19:00:57.405Z",
     "lastUpdated": "2023-09-20T18:15:15.474Z",
@@ -75,6 +97,14 @@
     "propertiesToKeep": [
       "UNION",
       "MRGID_EEZ"
-    ]
+    ],
+    "metadata":{
+      "name": "World EEZ With Land Zones v3",
+      "description": "The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses)",
+      "version": "3.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "20200317",
+      "publishLink": "https://marineregions.org/"
+    }
   }
 ]
