@@ -73,5 +73,45 @@
       "UNION",
       "MRGID_EEZ"
     ]
+  },
+  {
+    "datasourceId": "global-land-grid-osm",
+    "geo_type": "vector",
+    "formats": [
+      "fgb"
+    ],
+    "metadata": {
+      "name": "OSM Land Polygons WGS84 split",
+      "description": "OSM Land Polygons WGS84, split into grid tiles",
+      "version": "20230925",
+      "publisher": "OpenStreetMap Deutschland",
+      "publishDate": "20230925",
+      "publishLink": "https://osmdata.openstreetmap.de/data/land-polygons.html"
+    },
+    "layerName": "land_polygons",
+    "classKeys": [],
+    "created": "2023-09-26T18:26:33.524Z",
+    "lastUpdated": "2023-09-26T18:50:45.720Z",
+    "src": "data/src/land-polygons-split-4326/land_polygons.shp",
+    "propertiesToKeep": []
+  },
+  {
+    "datasourceId": "global-land-osm",
+    "geo_type": "vector",
+    "formats": [
+      "subdivided"
+    ],
+    "metadata": {
+      "name": "OSM Land Polygons WGS84",
+      "description": "OSM Land Polygons WGS84",
+      "version": "20230926",
+      "publisher": "OpenStreetMap Deutschland",
+      "publishDate": "20230926",
+      "publishLink": "https://osmdata.openstreetmap.de/data/land-polygons.html"
+    },
+    "layerName": "land_polygons",
+    "classKeys": [],
+    "propertiesToKeep": [],
+    "url": "https://d13jpx95dhfvtv.cloudfront.net"
   }
 ]
