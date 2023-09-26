@@ -39,8 +39,7 @@
     "start-storybook": "geoprocessing start-storybook",
     "url": "geoprocessing url",
     "clear-results": "geoprocessing clear-results",
-    "clear-all-results": "geoprocessing clear-all-results",
-    "prepare": "npm run translation:install"
+    "clear-all-results": "geoprocessing clear-all-results"
   },
   "keywords": [
     "@seasketch/geoprocessing"
@@ -60,7 +59,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
-    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.34",
+    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.37",
     "@types/request": "^2.48.8",
     "babel-plugin-i18next-extract": "^0.9.0",
     "request": "^2.88.2",
