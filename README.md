@@ -7,7 +7,7 @@ Listing of global datasource for use in SeaSketch projects
 ## World EEZ v11
 
 World EEZ boundaries and disputed areas
-- Version: 3.0
+- Version: 11.0
 - Publisher: Flanders Marine Institute (VLIZ)
 - Publish Date: 2019118
 - Source: [https://marineregions.org/](https://marineregions.org/)
