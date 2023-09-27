@@ -49,22 +49,22 @@
     "@turf/bbox": "^6.5.0",
     "@turf/bbox-clip": "^6.5.0",
     "@turf/boolean-valid": "^6.5.0",
-    "react-i18next": "^12.2.0",
     "@turf/combine": "^6.5.0",
     "@turf/flatten": "^6.5.0",
     "@turf/invariant": "^6.5.0",
     "@turf/kinks": "^6.5.0",
     "i18next-browser-languagedetector": "^7.0.1",
+    "react-i18next": "^12.2.0",
     "union-subdivided-polygons": "^0.9.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
-    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.40",
+    "@seasketch/geoprocessing": "3.0.1-experimental-subregional.43",
+    "@turf/boolean-disjoint": "^6.5.0",
+    "@turf/boolean-valid": "^6.5.0",
     "@types/request": "^2.48.8",
     "babel-plugin-i18next-extract": "^0.9.0",
-    "request": "^2.88.2",
-    "@turf/boolean-disjoint": "^6.5.0",
-    "@turf/boolean-valid": "^6.5.0"
+    "request": "^2.88.2"
   },
   "repositoryUrl": "https://github.com/seasketch/global-datasources",
   "author": "Tim Welch",
