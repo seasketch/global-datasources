@@ -15,6 +15,7 @@ out += `Listing of global datasource for use in SeaSketch projects\n\n`;
 const dsMds = project.datasources.forEach((ds) => {
   out += `\n## ${ds.metadata?.name}\n\n`;
   out += `${ds.metadata?.description}\n`;
+  out += `- Datasource ID: ${ds.datasourceId}\n`;
   out += `- Version: ${ds.metadata?.version}\n`;
   out += `- Publisher: ${ds.metadata?.publisher}\n`;
   out += `- Publish Date: ${ds.metadata?.publishDate}\n`;
@@ -22,6 +23,8 @@ const dsMds = project.datasources.forEach((ds) => {
   out += `- Formats: ${ds.formats
     .map((f) => `[${f}](${projectClient.getDatasourceUrl(ds, { format: f })})`)
     .join(" | ")}\n`;
+  out += `- Feature ID property: ${ds.idProperty || ""}\n`;
+  out += `- Feature name property: ${ds.nameProperty || "N/A"}\n`;
 });
 
 fs.writeFile(outfile, out);
