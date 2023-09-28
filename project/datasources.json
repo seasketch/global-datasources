@@ -88,7 +88,7 @@
     ],
     "metadata": {
       "name": "OSM Land Polygons WGS84 split",
-      "description": "OSM Land Polygons WGS84, split into grid tiles",
+      "description": "OSM Land Polygons WGS84, pre-split into grid tiles",
       "version": "20230925",
       "publisher": "OpenStreetMap Deutschland",
       "publishDate": "20230925",
