@@ -27,33 +27,6 @@
     "nameProperty": "GEONAME"
   },
   {
-    "datasourceId": "global-eez-12nm-mr-v3",
-    "geo_type": "vector",
-    "formats": [
-      "fgb",
-      "json"
-    ],
-    "metadata": {
-      "name": "World 12 Nautical Miles Zone (Territorial Seas) v3",
-      "description": "",
-      "version": "3.0",
-      "publisher": "Flanders Marine Institute (VLIZ)",
-      "publishDate": "2019118",
-      "publishLink": "https://marineregions.org/"
-    },
-    "layerName": "eez_12nm_v3",
-    "classKeys": [],
-    "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2023-09-26T18:20:51.743Z",
-    "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
-    "propertiesToKeep": [
-      "GEONAME",
-      "MRGID_EEZ"
-    ],
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME"
-  },
-  {
     "datasourceId": "global-eez-with-land-mr-v3",
     "geo_type": "vector",
     "formats": [
@@ -79,6 +52,33 @@
     ],
     "idProperty": "UNION",
     "nameProperty": "UNION"
+  },
+  {
+    "datasourceId": "global-eez-12nm-mr-v3",
+    "geo_type": "vector",
+    "formats": [
+      "fgb",
+      "json"
+    ],
+    "metadata": {
+      "name": "World 12 Nautical Miles Zone (Territorial Seas) v3",
+      "description": "",
+      "version": "3.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "2019118",
+      "publishLink": "https://marineregions.org/"
+    },
+    "layerName": "eez_12nm_v3",
+    "classKeys": [],
+    "created": "2023-09-19T01:41:11.791Z",
+    "lastUpdated": "2023-09-26T18:20:51.743Z",
+    "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
+    "propertiesToKeep": [
+      "GEONAME",
+      "MRGID_EEZ"
+    ],
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME"
   },
   {
     "datasourceId": "global-land-grid-osm",

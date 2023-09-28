@@ -3,10 +3,10 @@
 
 Listing of global datasource for use in SeaSketch projects
 
-
 ## World EEZ v11
 
 World EEZ boundaries and disputed areas
+
 - Datasource ID: global-eez-mr-v11
 - Version: 11.0
 - Publisher: Flanders Marine Institute (VLIZ)
@@ -16,7 +16,21 @@ World EEZ boundaries and disputed areas
 - Feature ID property: GEONAME
 - Feature name property: GEONAME
 
+## World EEZ With Land Zones v3
+
+The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses)
+
+- Datasource ID: global-eez-with-land-mr-v3
+- Version: 3.0
+- Publisher: Flanders Marine Institute (VLIZ)
+- Publish Date: 20200317
+- Source: [https://marineregions.org/](https://marineregions.org/)
+- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-with-land-mr-v3.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-with-land-mr-v3.json)
+- Feature ID property: UNION
+- Feature name property: UNION
+
 ## World 12 Nautical Miles Zone (Territorial Seas) v3
+
 
 
 - Datasource ID: global-eez-12nm-mr-v3
@@ -28,21 +42,10 @@ World EEZ boundaries and disputed areas
 - Feature ID property: GEONAME
 - Feature name property: GEONAME
 
-## World EEZ With Land Zones v3
-
-The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses)
-- Datasource ID: global-eez-with-land-mr-v3
-- Version: 3.0
-- Publisher: Flanders Marine Institute (VLIZ)
-- Publish Date: 20200317
-- Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-with-land-mr-v3.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-with-land-mr-v3.json)
-- Feature ID property: UNION
-- Feature name property: UNION
-
 ## OSM Land Polygons WGS84 split
 
 OSM Land Polygons WGS84, split into grid tiles
+
 - Datasource ID: global-land-grid-osm
 - Version: 20230925
 - Publisher: OpenStreetMap Deutschland
@@ -55,6 +58,7 @@ OSM Land Polygons WGS84, split into grid tiles
 ## OSM Land Polygons WGS84
 
 OSM Land Polygons WGS84
+
 - Datasource ID: global-land-osm
 - Version: 20230926
 - Publisher: OpenStreetMap Deutschland
