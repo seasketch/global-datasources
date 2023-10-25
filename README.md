@@ -26,8 +26,8 @@ World EEZ boundaries and disputed areas
 - Publish Date: 20231025
 - Source: [https://marineregions.org/](https://marineregions.org/)
 - Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12.json)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
+- Feature ID property: TERRITORY1
+- Feature name property: TERRITORY1
 
 ## World EEZ v11 (deprecated)
 
@@ -39,8 +39,8 @@ World EEZ boundaries and disputed areas
 - Publish Date: 2019118
 - Source: [https://marineregions.org/](https://marineregions.org/)
 - Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v11.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v11.json)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
+- Feature ID property: TERRITORY1
+- Feature name property: TERRITORY1
 
 ## World EEZ With Land Zones v3
 
@@ -65,8 +65,8 @@ The union of EEZ's with world country boundaries, specifically ESRI World Countr
 - Publish Date: 20231018
 - Source: [https://marineregions.org/](https://marineregions.org/)
 - Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v4.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v4.json)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
+- Feature ID property: TERRITORY1
+- Feature name property: TERRITORY1
 
 ## World 12 Nautical Miles Zone (Territorial Seas) v3 (deprecated)
 
@@ -78,8 +78,8 @@ The union of EEZ's with world country boundaries, specifically ESRI World Countr
 - Publish Date: 2019118
 - Source: [https://marineregions.org/](https://marineregions.org/)
 - Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v3.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v3.json)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
+- Feature ID property: TERRITORY1
+- Feature name property: TERRITORY1
 
 ## OSM Land Polygons WGS84 split
 
