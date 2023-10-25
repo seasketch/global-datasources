@@ -1,5 +1,27 @@
 [
   {
+    "datasourceId": "world",
+    "geo_type": "vector",
+    "formats": [
+      "json",
+      "fgb"
+    ],
+    "metadata": {
+      "name": "World Outline Polygon",
+      "description": "World polygon for default project geography in seasketch geoprocessing proejcts",
+      "version": "1.0",
+      "publisher": "SeaSketch",
+      "publishDate": "20231018",
+      "publishLink": ""
+    },
+    "layerName": "world",
+    "classKeys": [],
+    "created": "2023-10-05T00:00:00Z",
+    "lastUpdated": "2023-10-25T00:38:28.635Z",
+    "src": "data/default/world.json",
+    "propertiesToKeep": []
+  },
+  {
     "datasourceId": "global-eez-mr-v11",
     "geo_type": "vector",
     "formats": [
@@ -14,6 +36,8 @@
       "publishDate": "2019118",
       "publishLink": "https://marineregions.org/"
     },
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
     "layerName": "eez_v11",
     "classKeys": [],
     "created": "2023-09-19T01:13:16.233Z",
@@ -22,9 +46,7 @@
     "propertiesToKeep": [
       "GEONAME",
       "MRGID"
-    ],
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME"
+    ]
   },
   {
     "datasourceId": "global-eez-with-land-mr-v3",
@@ -41,6 +63,8 @@
       "publishDate": "20200317",
       "publishLink": "https://marineregions.org/"
     },
+    "idProperty": "UNION",
+    "nameProperty": "UNION",
     "layerName": "EEZ_Land_v3_202030",
     "classKeys": [],
     "created": "2023-09-19T19:00:57.405Z",
@@ -49,9 +73,7 @@
     "propertiesToKeep": [
       "UNION",
       "MRGID_EEZ"
-    ],
-    "idProperty": "UNION",
-    "nameProperty": "UNION"
+    ]
   },
   {
     "datasourceId": "global-eez-12nm-mr-v3",
@@ -68,6 +90,8 @@
       "publishDate": "2019118",
       "publishLink": "https://marineregions.org/"
     },
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
     "layerName": "eez_12nm_v3",
     "classKeys": [],
     "created": "2023-09-19T01:41:11.791Z",
@@ -76,9 +100,7 @@
     "propertiesToKeep": [
       "GEONAME",
       "MRGID_EEZ"
-    ],
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME"
+    ]
   },
   {
     "datasourceId": "global-land-grid-osm",
@@ -94,13 +116,13 @@
       "publishDate": "20230925",
       "publishLink": "https://osmdata.openstreetmap.de/data/land-polygons.html"
     },
+    "idProperty": "gid",
     "layerName": "land_polygons",
     "classKeys": [],
     "created": "2023-09-26T18:26:33.524Z",
     "lastUpdated": "2023-09-26T18:50:45.720Z",
     "src": "data/src/land-polygons-split-4326/land_polygons.shp",
-    "propertiesToKeep": [],
-    "idProperty": "gid"
+    "propertiesToKeep": []
   },
   {
     "datasourceId": "global-land-osm",
@@ -116,10 +138,9 @@
       "publishDate": "20230926",
       "publishLink": "https://osmdata.openstreetmap.de/data/land-polygons.html"
     },
+    "idProperty": "gid",
     "layerName": "land_polygons",
     "classKeys": [],
-    "propertiesToKeep": [],
-    "url": "https://d13jpx95dhfvtv.cloudfront.net",
-    "idProperty": "gid"
+    "url": "https://d13jpx95dhfvtv.cloudfront.net"
   }
 ]

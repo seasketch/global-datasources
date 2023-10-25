@@ -3,6 +3,19 @@
 
 Listing of global datasource for use in SeaSketch projects
 
+## World Outline Polygon
+
+World polygon for default project geography in seasketch geoprocessing proejcts
+
+- Datasource ID: world
+- Version: 1.0
+- Publisher: SeaSketch
+- Publish Date: 20231018
+- Source: []()
+- Formats: [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.json) | [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.fgb)
+- Feature ID property: 
+- Feature name property: N/A
+
 ## World EEZ v11
 
 World EEZ boundaries and disputed areas
@@ -18,7 +31,7 @@ World EEZ boundaries and disputed areas
 
 ## World EEZ With Land Zones v3
 
-The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses)
+The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses
 
 - Datasource ID: global-eez-with-land-mr-v3
 - Version: 3.0
@@ -44,7 +57,7 @@ The union of EEZ's with world country boundaries, specifically ESRI World Countr
 
 ## OSM Land Polygons WGS84 split
 
-OSM Land Polygons WGS84, split into grid tiles
+OSM Land Polygons WGS84, pre-split into grid tiles
 
 - Datasource ID: global-land-grid-osm
 - Version: 20230925
