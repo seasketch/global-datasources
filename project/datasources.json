@@ -36,16 +36,15 @@
       "publishDate": "20231025",
       "publishLink": "https://marineregions.org/"
     },
-    "idProperty": "TERRITORY1",
-    "nameProperty": "TERRITORY1",
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
     "layerName": "eez_v12",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-10-25T20:24:12.669Z",
+    "lastUpdated": "2023-10-25T21:24:02.402Z",
     "src": "data/src/World_EEZ_v12_20231025/eez_v12.shp",
     "propertiesToKeep": [
       "GEONAME",
-      "TERRITORY1",
       "MRGID"
     ]
   },
@@ -64,16 +63,15 @@
       "publishDate": "2019118",
       "publishLink": "https://marineregions.org/"
     },
-    "idProperty": "TERRITORY1",
-    "nameProperty": "TERRITORY1",
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
     "layerName": "eez_v11",
     "classKeys": [],
     "created": "2023-09-19T01:13:16.233Z",
-    "lastUpdated": "2023-10-25T20:25:03.832Z",
+    "lastUpdated": "2023-10-25T21:24:44.320Z",
     "src": "data/src/World_EEZ_v11_20191118/eez_v11.shp",
     "propertiesToKeep": [
       "GEONAME",
-      "TERRITORY1",
       "MRGID"
     ]
   },
@@ -119,15 +117,14 @@
       "publishDate": "20231018",
       "publishLink": "https://marineregions.org/"
     },
-    "idProperty": "TERRITORY1",
-    "nameProperty": "TERRITORY1",
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
     "layerName": "eez_12nm_v4",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-10-25T20:25:21.482Z",
+    "lastUpdated": "2023-10-25T21:24:59.380Z",
     "src": "data/src/World_12NM_v4_20231025/eez_12nm_v4.shp",
     "propertiesToKeep": [
-      "TERRITORY1",
       "GEONAME",
       "MRGID_EEZ"
     ]
@@ -147,15 +144,14 @@
       "publishDate": "2019118",
       "publishLink": "https://marineregions.org/"
     },
-    "idProperty": "TERRITORY1",
-    "nameProperty": "TERRITORY1",
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
     "layerName": "eez_12nm_v3",
     "classKeys": [],
     "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2023-10-25T20:25:40.463Z",
+    "lastUpdated": "2023-10-25T21:25:15.005Z",
     "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
     "propertiesToKeep": [
-      "TERRITORY1",
       "GEONAME",
       "MRGID_EEZ"
     ]
