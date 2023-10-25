@@ -22,6 +22,33 @@
     "propertiesToKeep": []
   },
   {
+    "datasourceId": "global-eez-mr-v12",
+    "geo_type": "vector",
+    "formats": [
+      "fgb",
+      "json"
+    ],
+    "metadata": {
+      "name": "World EEZ v12",
+      "description": "World EEZ boundaries and disputed areas",
+      "version": "12.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "20231025",
+      "publishLink": "https://marineregions.org/"
+    },
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
+    "layerName": "eez_v12",
+    "classKeys": [],
+    "created": "2023-10-25T12:00:00Z",
+    "lastUpdated": "2023-10-25T19:26:07.713Z",
+    "src": "data/src/World_EEZ_v12_20231025/eez_v12.shp",
+    "propertiesToKeep": [
+      "GEONAME",
+      "MRGID"
+    ]
+  },
+  {
     "datasourceId": "global-eez-mr-v11",
     "geo_type": "vector",
     "formats": [
@@ -29,7 +56,7 @@
       "json"
     ],
     "metadata": {
-      "name": "World EEZ v11",
+      "name": "World EEZ v11 (deprecated)",
       "description": "World EEZ boundaries and disputed areas",
       "version": "11.0",
       "publisher": "Flanders Marine Institute (VLIZ)",
@@ -76,6 +103,33 @@
     ]
   },
   {
+    "datasourceId": "global-eez-12nm-mr-v4",
+    "geo_type": "vector",
+    "formats": [
+      "fgb",
+      "json"
+    ],
+    "metadata": {
+      "name": "World 12 Nautical Miles Zone (Territorial Seas) v4",
+      "description": "",
+      "version": "4.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "20231018",
+      "publishLink": "https://marineregions.org/"
+    },
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
+    "layerName": "eez_12nm_v4",
+    "classKeys": [],
+    "created": "2023-10-25T12:00:00Z",
+    "lastUpdated": "2023-10-25T19:26:50.231Z",
+    "src": "data/src/World_12NM_v4_20231025/eez_12nm_v4.shp",
+    "propertiesToKeep": [
+      "GEONAME",
+      "MRGID_EEZ"
+    ]
+  },
+  {
     "datasourceId": "global-eez-12nm-mr-v3",
     "geo_type": "vector",
     "formats": [
@@ -83,7 +137,7 @@
       "json"
     ],
     "metadata": {
-      "name": "World 12 Nautical Miles Zone (Territorial Seas) v3",
+      "name": "World 12 Nautical Miles Zone (Territorial Seas) v3 (deprecated)",
       "description": "",
       "version": "3.0",
       "publisher": "Flanders Marine Institute (VLIZ)",
