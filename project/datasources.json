@@ -49,6 +49,32 @@
     ]
   },
   {
+    "datasourceId": "global-eez-mr-v12-subdivided",
+    "geo_type": "vector",
+    "formats": [
+      "fgb"
+    ],
+    "metadata": {
+      "name": "World EEZ v12 Subdivided",
+      "description": "World EEZ boundaries and disputed areas, subdivided",
+      "version": "12.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "20231025",
+      "publishLink": "https://marineregions.org/"
+    },
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
+    "layerName": "eez_v12",
+    "classKeys": [],
+    "created": "2023-10-25T12:00:00Z",
+    "lastUpdated": "2023-10-25T21:24:02.402Z",
+    "src": "data/src/World_EEZ_v12_20231025/eez_v12.see_eez-mr-v12-prep_script",
+    "propertiesToKeep": [
+      "GEONAME",
+      "MRGID"
+    ]
+  },
+  {
     "datasourceId": "global-eez-mr-v11",
     "geo_type": "vector",
     "formats": [
