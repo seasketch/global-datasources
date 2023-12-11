@@ -219,6 +219,14 @@
       "tif"
     ],
     "precalc": true,
+    "metadata": {
+      "name": "BioOracle Present Day Surface pH",
+      "description": "BioOracle Present Day Surface pH global raster",
+      "version": "2.2",
+      "publisher": "BioOracle",
+      "publishDate": "2021-09-24",
+      "publishLink": "https://www.bio-oracle.org/"
+    },
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.3999999521443642e+38,
@@ -233,6 +241,14 @@
       "tif"
     ],
     "precalc": true,
+    "metadata": {
+      "name": "BioOracle Present Day Surface Temperature Maximum",
+      "description": "BioOracle Present Day Surface Temperature Maximum global raster",
+      "version": "2.2",
+      "publisher": "BioOracle",
+      "publishDate": "2021-09-24",
+      "publishLink": "https://www.bio-oracle.org/"
+    },
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -1.7e+308,
@@ -247,6 +263,14 @@
       "tif"
     ],
     "precalc": true,
+    "metadata": {
+      "name": "BioOracle Present Day Surface Temperature Minimum",
+      "description": "BioOracle Present Day Surface Temperature Minimum global raster",
+      "version": "2.2",
+      "publisher": "BioOracle",
+      "publishDate": "2021-09-24",
+      "publishLink": "https://www.bio-oracle.org/"
+    },
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -1.7e+308,

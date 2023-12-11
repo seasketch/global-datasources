@@ -2,6 +2,7 @@
 import project from "../project";
 import fs from "fs-extra";
 import projectClient from "../project/projectClient";
+import { isVectorDatasource } from "@seasketch/geoprocessing";
 
 // Generate README.md for project from datasources.json
 
@@ -23,8 +24,10 @@ const dsMds = project.datasources.forEach((ds) => {
   out += `- Formats: ${ds.formats
     .map((f) => `[${f}](${projectClient.getDatasourceUrl(ds, { format: f })})`)
     .join(" | ")}\n`;
-  out += `- Feature ID property: ${ds.idProperty || ""}\n`;
-  out += `- Feature name property: ${ds.nameProperty || "N/A"}\n`;
+  if (isVectorDatasource(ds)) {
+    out += `- Feature ID property: ${ds.idProperty || ""}\n`;
+    out += `- Feature name property: ${ds.nameProperty || "N/A"}\n`;
+  }
 });
 
 fs.writeFile(outfile, out);

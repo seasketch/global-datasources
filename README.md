@@ -29,19 +29,6 @@ World EEZ boundaries and disputed areas
 - Feature ID property: GEONAME
 - Feature name property: GEONAME
 
-## World EEZ v12 Subdivided
-
-World EEZ boundaries and disputed areas, subdivided
-
-- Datasource ID: global-eez-mr-v12-subdivided
-- Version: 12.0
-- Publisher: Flanders Marine Institute (VLIZ)
-- Publish Date: 20231025
-- Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12-subdivided.fgb)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
-
 ## World EEZ v11 (deprecated)
 
 World EEZ boundaries and disputed areas
@@ -119,3 +106,36 @@ OSM Land Polygons WGS84
 - Formats: [subdivided](https://d13jpx95dhfvtv.cloudfront.net)
 - Feature ID property: gid
 - Feature name property: N/A
+
+## BioOracle Present Day Surface pH
+
+BioOracle Present Day Surface pH global raster
+
+- Datasource ID: bo-present-surface-ph
+- Version: 2.2
+- Publisher: BioOracle
+- Publish Date: 2021-09-24
+- Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
+- Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-ph.tif)
+
+## BioOracle Present Day Surface Temperature Maximum
+
+BioOracle Present Day Surface Temperature Maximum global raster
+
+- Datasource ID: bo-present-surface-temp-max
+- Version: 2.2
+- Publisher: BioOracle
+- Publish Date: 2021-09-24
+- Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
+- Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-max.tif)
+
+## BioOracle Present Day Surface Temperature Minimum
+
+BioOracle Present Day Surface Temperature Minimum global raster
+
+- Datasource ID: bo-present-surface-temp-min
+- Version: 2.2
+- Publisher: BioOracle
+- Publish Date: 2021-09-24
+- Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
+- Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-min.tif)

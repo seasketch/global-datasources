@@ -1,0 +1,13 @@
+
+
+The data available in Bio-ORACLE are documented in two peer reviewed articles:
+
+Tyberghein L, Verbruggen H, Pauly K, Troupin C, Mineur F, De Clerck O (2012) Bio-ORACLE: A global environmental dataset for marine species distribution modelling. Global Ecology and Biogeography, 21, 272–281.
+[access publication]   [supporting information]
+
+Assis, J., Tyberghein, L., Bosh, S., Verbruggen, H., Serrão, E. A., & De Clerck, O. (2017). Bio-ORACLE v2.0: Extending marine data layers for bioclimatic modelling. Global Ecology and Biogeography.
+[access publication]   [supporting information]
+
+Disclaimer : Bio-ORACLE is released under the GNU General Public License.
+
+We have made all reasonable efforts to ensure the quality and accuracy of the material on this website. However, the dataset is provided "as is" without warranty of any kind, including but not limited to the implied warranties of fitness for a particular purpose. The entire rist as to the quality and performance of the dataset is with you. We accept no liability for any loss or damage resulting directly or indirectly from the use of the material on this site.
