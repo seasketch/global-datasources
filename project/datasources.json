@@ -6,6 +6,7 @@
       "json",
       "fgb"
     ],
+    "precalc": true,
     "metadata": {
       "name": "World Outline Polygon",
       "description": "World polygon for default project geography in seasketch geoprocessing proejcts",
@@ -17,9 +18,10 @@
     "layerName": "world",
     "classKeys": [],
     "created": "2023-10-05T00:00:00Z",
-    "lastUpdated": "2023-10-25T00:38:28.635Z",
+    "lastUpdated": "2023-12-11T12:48:45.930Z",
     "src": "data/default/world.json",
-    "propertiesToKeep": []
+    "propertiesToKeep": [],
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-eez-mr-v12",
@@ -28,6 +30,7 @@
       "fgb",
       "json"
     ],
+    "precalc": false,
     "metadata": {
       "name": "World EEZ v12",
       "description": "World EEZ boundaries and disputed areas",
@@ -41,38 +44,13 @@
     "layerName": "eez_v12",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-10-25T21:24:02.402Z",
+    "lastUpdated": "2023-12-11T12:49:42.282Z",
     "src": "data/src/World_EEZ_v12_20231025/eez_v12.shp",
     "propertiesToKeep": [
       "GEONAME",
       "MRGID"
-    ]
-  },
-  {
-    "datasourceId": "global-eez-mr-v12-subdivided",
-    "geo_type": "vector",
-    "formats": [
-      "fgb"
     ],
-    "metadata": {
-      "name": "World EEZ v12 Subdivided",
-      "description": "World EEZ boundaries and disputed areas, subdivided",
-      "version": "12.0",
-      "publisher": "Flanders Marine Institute (VLIZ)",
-      "publishDate": "20231025",
-      "publishLink": "https://marineregions.org/"
-    },
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME",
-    "layerName": "eez_v12",
-    "classKeys": [],
-    "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-10-25T21:24:02.402Z",
-    "src": "data/src/World_EEZ_v12_20231025/eez_v12.see_eez-mr-v12-prep_script",
-    "propertiesToKeep": [
-      "GEONAME",
-      "MRGID"
-    ]
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-eez-mr-v11",
@@ -81,6 +59,7 @@
       "fgb",
       "json"
     ],
+    "precalc": false,
     "metadata": {
       "name": "World EEZ v11 (deprecated)",
       "description": "World EEZ boundaries and disputed areas",
@@ -94,12 +73,13 @@
     "layerName": "eez_v11",
     "classKeys": [],
     "created": "2023-09-19T01:13:16.233Z",
-    "lastUpdated": "2023-10-25T21:24:44.320Z",
+    "lastUpdated": "2023-12-11T12:50:43.572Z",
     "src": "data/src/World_EEZ_v11_20191118/eez_v11.shp",
     "propertiesToKeep": [
       "GEONAME",
       "MRGID"
-    ]
+    ],
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-eez-with-land-mr-v3",
@@ -108,6 +88,7 @@
       "fgb",
       "json"
     ],
+    "precalc": false,
     "metadata": {
       "name": "World EEZ With Land Zones v3",
       "description": "The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses",
@@ -121,12 +102,13 @@
     "layerName": "EEZ_Land_v3_202030",
     "classKeys": [],
     "created": "2023-09-19T19:00:57.405Z",
-    "lastUpdated": "2023-09-26T18:20:58.429Z",
+    "lastUpdated": "2023-12-11T12:50:51.333Z",
     "src": "data/src/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp",
     "propertiesToKeep": [
       "UNION",
       "MRGID_EEZ"
-    ]
+    ],
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-eez-12nm-mr-v4",
@@ -135,6 +117,7 @@
       "fgb",
       "json"
     ],
+    "precalc": false,
     "metadata": {
       "name": "World 12 Nautical Miles Zone (Territorial Seas) v4",
       "description": "",
@@ -148,12 +131,13 @@
     "layerName": "eez_12nm_v4",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-10-25T21:24:59.380Z",
+    "lastUpdated": "2023-12-11T12:51:12.498Z",
     "src": "data/src/World_12NM_v4_20231025/eez_12nm_v4.shp",
     "propertiesToKeep": [
       "GEONAME",
       "MRGID_EEZ"
-    ]
+    ],
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-eez-12nm-mr-v3",
@@ -162,6 +146,7 @@
       "fgb",
       "json"
     ],
+    "precalc": false,
     "metadata": {
       "name": "World 12 Nautical Miles Zone (Territorial Seas) v3 (deprecated)",
       "description": "",
@@ -175,12 +160,13 @@
     "layerName": "eez_12nm_v3",
     "classKeys": [],
     "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2023-10-25T21:25:15.005Z",
+    "lastUpdated": "2023-12-11T12:51:34.727Z",
     "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
     "propertiesToKeep": [
       "GEONAME",
       "MRGID_EEZ"
-    ]
+    ],
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-land-grid-osm",
@@ -188,6 +174,7 @@
     "formats": [
       "fgb"
     ],
+    "precalc": false,
     "metadata": {
       "name": "OSM Land Polygons WGS84 split",
       "description": "OSM Land Polygons WGS84, pre-split into grid tiles",
@@ -200,9 +187,10 @@
     "layerName": "land_polygons",
     "classKeys": [],
     "created": "2023-09-26T18:26:33.524Z",
-    "lastUpdated": "2023-09-26T18:50:45.720Z",
+    "lastUpdated": "2023-12-11T12:52:21.562Z",
     "src": "data/src/land-polygons-split-4326/land_polygons.shp",
-    "propertiesToKeep": []
+    "propertiesToKeep": [],
+    "explodeMulti": true
   },
   {
     "datasourceId": "global-land-osm",
@@ -210,6 +198,7 @@
     "formats": [
       "subdivided"
     ],
+    "precalc": false,
     "metadata": {
       "name": "OSM Land Polygons WGS84",
       "description": "OSM Land Polygons WGS84",
@@ -222,5 +211,47 @@
     "layerName": "land_polygons",
     "classKeys": [],
     "url": "https://d13jpx95dhfvtv.cloudfront.net"
+  },
+  {
+    "datasourceId": "bo-present-surface-ph",
+    "geo_type": "raster",
+    "formats": [
+      "tif"
+    ],
+    "precalc": true,
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -3.3999999521443642e+38,
+    "created": "2023-12-11T11:55:31.053Z",
+    "lastUpdated": "2023-12-11T12:52:22.966Z",
+    "src": "data/src/BioOracle/Present.Surface.pH.BOv2_2.tif"
+  },
+  {
+    "datasourceId": "bo-present-surface-temp-max",
+    "geo_type": "raster",
+    "formats": [
+      "tif"
+    ],
+    "precalc": true,
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -1.7e+308,
+    "created": "2023-12-11T11:56:47.117Z",
+    "lastUpdated": "2023-12-11T12:52:25.733Z",
+    "src": "data/src/BioOracle/Present.Surface.Temperature.Max.tif"
+  },
+  {
+    "datasourceId": "bo-present-surface-temp-min",
+    "geo_type": "raster",
+    "formats": [
+      "tif"
+    ],
+    "precalc": true,
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -1.7e+308,
+    "created": "2023-12-11T11:58:59.485Z",
+    "lastUpdated": "2023-12-11T12:52:27.957Z",
+    "src": "/home/twelch/src/global-datasources/data/src/BioOracle/Present.Surface.Temperature.Min.tif"
   }
 ]
