@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
-    "@seasketch/geoprocessing": "5.0.1",
+    "@seasketch/geoprocessing": "5.0.2-experimental-antimeridian-support.17",
     "@turf/boolean-disjoint": "^6.5.0",
     "@turf/boolean-valid": "^6.5.0",
     "@types/request": "^2.48.8",
