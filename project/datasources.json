@@ -297,6 +297,8 @@
     ],
     "explodeMulti": false,
     "precalc": true,
+    "idProperty": "ECOREGION",
+    "nameProperty": "ECOREGION",
     "metadata": {
       "name": "Marine Ecoregions of the World",
       "description": "A biogeographic classification of the world's coastal and continental shelf waters following a nested hierarchy of realms, provinces and ecoregions",

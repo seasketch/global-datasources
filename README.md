@@ -139,3 +139,16 @@ BioOracle Present Day Surface Temperature Minimum global raster
 - Publish Date: 2021-09-24
 - Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
 - Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-min.tif)
+
+## Marine Ecoregions of the World
+
+A biogeographic classification of the world's coastal and continental shelf waters following a nested hierarchy of realms, provinces and ecoregions
+
+- Datasource ID: meow-ecos
+- Version: 20190911
+- Publisher: The Nature Conservancy
+- Publish Date: 20190911
+- Source: [https://tnc.maps.arcgis.com/home/item.html?id=ed2be4cf8b7a451f84fd093c2e7660e3](https://tnc.maps.arcgis.com/home/item.html?id=ed2be4cf8b7a451f84fd093c2e7660e3)
+- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/meow-ecos.fgb)
+- Feature ID property: ECOREGION
+- Feature name property: ECOREGION
