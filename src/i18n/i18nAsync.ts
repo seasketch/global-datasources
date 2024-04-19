@@ -1,7 +1,7 @@
 import { createInstance } from "i18next";
 import { initReactI18next } from "react-i18next";
 import extraTerms from "./extraTerms.json";
-import languages from "./supported";
+import languages from "./supported.js";
 
 const defaultLang = "en";
 
@@ -55,37 +55,55 @@ export function createI18nAsyncInstance(
           // Load translations
           let baseLangResources = {};
           try {
-            baseLangResources = await import(
-              /* webpackChunkName: "baseLang" */ `${baseLangPath}/${
+            const { default: data } = await import(
+              `${baseLangPath}/${
                 isDefault ? defaultLang : curLanguage
-              }/${namespace}.json`
+              }/${namespace}.json`, {
+                assert: { type: 'json' }
+              }
             );
+            baseLangResources = data
           } catch (error: unknown) {
             console.info(
-              `Warning: failed to find base lang resource.  If this is not a gp project, then this is expected.`
+              `Warning: failed to find base lang resource.  This is expected if you are loading the core geoprocessing library directly (storybook) instead of a GP project.`
             );
           }
-          //console.log("baseLangResources", baseLangResources);
+          // console.log("baseLangResources", baseLangResources);
 
           let langResources = {};
           if (langPath !== undefined) {
-            langResources = await import(
-              /* webpackChunkName: "localLang" */ `${langPath}/${
-                isDefault ? defaultLang : curLanguage
-              }/${namespace}.json`
-            );
+            try {
+              if (!isDefault) {
+                const { default: data } = await import(
+                  `${langPath}/${
+                    isDefault ? defaultLang : curLanguage
+                  }/${namespace}.json`, {
+                    assert: { type: 'json' }
+                  }
+                );
+                langResources = data
+              } else {
+                langResources = {}
+              }
+            } catch (error: unknown) {
+              console.info(
+                `Warning: failed to find lang resource.`
+              );
+            }
           }
-          //console.log("langResources", langResources);
+          // console.log("langResources", langResources);
+          // console.log("extraTerms", extraTerms)
 
           // Return merged translations
-          if (defaultLang) {
-            // merge in plurals if english, because extractor leaves them blank, so they are managed specially
+          if (isDefault) {
+            // merge in extraTerms if english
             callback(null, {
               ...baseLangResources,
               ...langResources,
               ...extraTerms,
             });
           } else {
+            // otherwise extra terms should already be translated in langResources
             callback(null, {
               ...baseLangResources,
               ...langResources,
