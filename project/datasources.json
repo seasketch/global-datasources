@@ -18,7 +18,7 @@
     "layerName": "world",
     "classKeys": [],
     "created": "2023-10-05T00:00:00Z",
-    "lastUpdated": "2023-12-11T12:48:45.930Z",
+    "lastUpdated": "2024-06-10T19:57:25.521Z",
     "src": "data/default/world.json",
     "propertiesToKeep": [],
     "explodeMulti": true
@@ -44,7 +44,7 @@
     "layerName": "eez_v12",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-12-11T12:49:42.282Z",
+    "lastUpdated": "2024-06-10T19:58:35.430Z",
     "src": "data/src/World_EEZ_v12_20231025/eez_v12.shp",
     "propertiesToKeep": [
       "GEONAME",
@@ -73,7 +73,7 @@
     "layerName": "eez_v11",
     "classKeys": [],
     "created": "2023-09-19T01:13:16.233Z",
-    "lastUpdated": "2023-12-11T12:50:43.572Z",
+    "lastUpdated": "2024-06-10T19:59:46.724Z",
     "src": "data/src/World_EEZ_v11_20191118/eez_v11.shp",
     "propertiesToKeep": [
       "GEONAME",
@@ -102,7 +102,7 @@
     "layerName": "EEZ_Land_v3_202030",
     "classKeys": [],
     "created": "2023-09-19T19:00:57.405Z",
-    "lastUpdated": "2023-12-11T12:50:51.333Z",
+    "lastUpdated": "2024-06-10T19:59:56.326Z",
     "src": "data/src/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp",
     "propertiesToKeep": [
       "UNION",
@@ -131,7 +131,7 @@
     "layerName": "eez_12nm_v4",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2023-12-11T12:51:12.498Z",
+    "lastUpdated": "2024-06-10T20:00:23.282Z",
     "src": "data/src/World_12NM_v4_20231025/eez_12nm_v4.shp",
     "propertiesToKeep": [
       "GEONAME",
@@ -160,7 +160,7 @@
     "layerName": "eez_12nm_v3",
     "classKeys": [],
     "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2023-12-11T12:51:34.727Z",
+    "lastUpdated": "2024-06-10T20:00:52.704Z",
     "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
     "propertiesToKeep": [
       "GEONAME",
@@ -187,7 +187,7 @@
     "layerName": "land_polygons",
     "classKeys": [],
     "created": "2023-09-26T18:26:33.524Z",
-    "lastUpdated": "2023-12-11T12:52:21.562Z",
+    "lastUpdated": "2024-06-10T20:02:30.267Z",
     "src": "data/src/land-polygons-split-4326/land_polygons.shp",
     "propertiesToKeep": [],
     "explodeMulti": true
@@ -231,7 +231,7 @@
     "band": 1,
     "noDataValue": -3.3999999521443642e+38,
     "created": "2023-12-11T11:55:31.053Z",
-    "lastUpdated": "2023-12-11T12:52:22.966Z",
+    "lastUpdated": "2024-06-10T20:02:31.986Z",
     "src": "data/src/BioOracle/Present.Surface.pH.BOv2_2.tif"
   },
   {
@@ -253,7 +253,7 @@
     "band": 1,
     "noDataValue": -1.7e+308,
     "created": "2023-12-11T11:56:47.117Z",
-    "lastUpdated": "2023-12-11T12:52:25.733Z",
+    "lastUpdated": "2024-06-10T20:02:35.480Z",
     "src": "data/src/BioOracle/Present.Surface.Temperature.Max.tif"
   },
   {
@@ -275,30 +275,16 @@
     "band": 1,
     "noDataValue": -1.7e+308,
     "created": "2023-12-11T11:58:59.485Z",
-    "lastUpdated": "2023-12-11T12:52:27.957Z",
+    "lastUpdated": "2024-06-10T20:02:38.846Z",
     "src": "/home/twelch/src/global-datasources/data/src/BioOracle/Present.Surface.Temperature.Min.tif"
   },
   {
-    "src": "data/src/MEOW/meow_ecos.shp",
-    "layerName": "meow_ecos",
-    "geo_type": "vector",
     "datasourceId": "meow-ecos",
+    "geo_type": "vector",
     "formats": [
       "fgb"
     ],
-    "classKeys": [],
-    "created": "2023-12-12T00:41:57.298Z",
-    "lastUpdated": "2023-12-12T00:41:57.298Z",
-    "propertiesToKeep": [
-      "ECOREGION",
-      "PROVINCE",
-      "REALM",
-      "Lat_Zone"
-    ],
-    "explodeMulti": false,
     "precalc": true,
-    "idProperty": "ECOREGION",
-    "nameProperty": "ECOREGION",
     "metadata": {
       "name": "Marine Ecoregions of the World",
       "description": "A biogeographic classification of the world's coastal and continental shelf waters following a nested hierarchy of realms, provinces and ecoregions",
@@ -306,6 +292,20 @@
       "publisher": "The Nature Conservancy",
       "publishDate": "20190911",
       "publishLink": "https://tnc.maps.arcgis.com/home/item.html?id=ed2be4cf8b7a451f84fd093c2e7660e3"
-    }
+    },
+    "idProperty": "ECOREGION",
+    "nameProperty": "ECOREGION",
+    "layerName": "meow_ecos",
+    "classKeys": [],
+    "created": "2023-12-12T00:41:57.298Z",
+    "lastUpdated": "2024-06-10T20:02:39.045Z",
+    "src": "data/src/MEOW/meow_ecos.shp",
+    "propertiesToKeep": [
+      "ECOREGION",
+      "PROVINCE",
+      "REALM",
+      "Lat_Zone"
+    ],
+    "explodeMulti": false
   }
 ]
