@@ -51,6 +51,34 @@
     "explodeMulti": true
   },
   {
+    "datasourceId": "global-eez-mr-v12-subdivided",
+    "geo_type": "vector",
+    "formats": [
+      "fgb"
+    ],
+    "precalc": false,
+    "metadata": {
+      "name": "World EEZ v12 Subdivided",
+      "description": "World EEZ boundaries and disputed areas",
+      "version": "12.0",
+      "publisher": "Flanders Marine Institute (VLIZ)",
+      "publishDate": "20231025",
+      "publishLink": "https://marineregions.org/"
+    },
+    "idProperty": "GEONAME",
+    "nameProperty": "GEONAME",
+    "layerName": "global-eez-mr-v12-subdivided",
+    "classKeys": [],
+    "created": "2024-12-21T01:23:38.260Z",
+    "lastUpdated": "2024-12-21T20:20:37.209Z",
+    "src": "data/src/World_EEZ_v12_20231025/global-eez-mr-v12-subdivided.fgb",
+    "propertiesToKeep": [
+      "GEONAME",
+      "MRGID"
+    ],
+    "explodeMulti": true
+  },
+  {
     "datasourceId": "global-eez-mr-v11",
     "geo_type": "vector",
     "formats": [
@@ -163,30 +191,6 @@
     "explodeMulti": true
   },
   {
-    "datasourceId": "global-land-grid-osm",
-    "geo_type": "vector",
-    "formats": [
-      "fgb"
-    ],
-    "precalc": false,
-    "metadata": {
-      "name": "OSM Land Polygons WGS84 split",
-      "description": "OSM Land Polygons WGS84, pre-split into grid tiles",
-      "version": "20230925",
-      "publisher": "OpenStreetMap Deutschland",
-      "publishDate": "20230925",
-      "publishLink": "https://osmdata.openstreetmap.de/data/land-polygons.html"
-    },
-    "idProperty": "gid",
-    "layerName": "land_polygons",
-    "classKeys": [],
-    "created": "2023-09-26T18:26:33.524Z",
-    "lastUpdated": "2024-12-21T01:24:56.428Z",
-    "src": "data/src/land-polygons-split-4326/land_polygons.shp",
-    "propertiesToKeep": [],
-    "explodeMulti": true
-  },
-  {
     "datasourceId": "global-land-osm",
     "geo_type": "vector",
     "formats": [
@@ -205,6 +209,32 @@
     "layerName": "land_polygons",
     "classKeys": [],
     "url": "https://d13jpx95dhfvtv.cloudfront.net"
+  },
+  {
+    "datasourceId": "global-coastline-daylight-v158",
+    "geo_type": "vector",
+    "formats": [
+      "fgb"
+    ],
+    "precalc": false,
+    "metadata": {
+      "name": "Daylight Map Coastline Polygons v1.58",
+      "description": "Daylight map distribution v1.58 coastline land polygons",
+      "version": "1.58",
+      "publisher": "Meta",
+      "publishDate": "20241112",
+      "publishLink": "https://daylightmap.org/"
+    },
+    "idProperty": "FID",
+    "layerName": "land_polygons",
+    "classKeys": [],
+    "created": "2024-12-21T12:00:00.000Z",
+    "lastUpdated": "2024-12-21T21:47:41.944Z",
+    "src": "data/src/daylight-158-coastlines/land_polygons.shp",
+    "propertiesToKeep": [
+      "FID"
+    ],
+    "explodeMulti": true
   },
   {
     "datasourceId": "bo-present-surface-ph",

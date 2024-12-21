@@ -6,8 +6,12 @@ import {
   FeatureClipOperation,
   VectorDataSource,
   ensureValidPolygon,
+  Polygon,
+  MultiPolygon,
+  loadFgb,
 } from "@seasketch/geoprocessing";
 import { bbox } from "@turf/turf";
+import project from "../../project/projectClient.js";
 
 /**
  * Preprocessor takes a Polygon feature/sketch and returns the portion that
@@ -22,17 +26,21 @@ export async function clipToOcean(feature: Feature | Sketch): Promise<Feature> {
     enforceMaxSize: false,
   });
 
-  // Get land polygons - osm land vector datasource
-  const landDatasource = new VectorDataSource(
-    "https://d3p1dsef9f0gjr.cloudfront.net/",
-  );
   const featureBox = bbox(feature);
-  // one gid assigned per country, use to union subdivided pieces back together on fetch, prevents slivers
-  const landFC = await landDatasource.fetchUnion(featureBox, "gid");
+
+  // Get land polygons - daylight osm land vector datasource
+  const ds = project.getInternalVectorDatasourceById(
+    "global-coastline-daylight-v158"
+  );
+  const url = project.getDatasourceUrl(ds);
+  const landFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
+    url,
+    featureBox
+  );
 
   const eraseLand: FeatureClipOperation = {
     operation: "difference",
-    clipFeatures: landFC.features,
+    clipFeatures: landFeatures,
   };
 
   // Execute one or more clip operations in order against feature

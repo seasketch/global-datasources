@@ -54,15 +54,12 @@ describe("clipToOcean", () => {
     vi.restoreAllMocks();
   });
 
-  // Mock VectorDataSource fetchUnion method to return clipFeature
+  // Mock loadFgb method to return landFeature
   // @ts-ignore
   vi.mock(import("@seasketch/geoprocessing"), async (importOriginal) => {
     const actual = await importOriginal();
-    const VectorDataSource = vi.fn();
-    VectorDataSource.prototype.fetchUnion = vi.fn(() =>
-      featureCollection([landFeature]),
-    );
-    return { ...actual, VectorDataSource };
+    const loadFgb = vi.fn(() => [landFeature]);
+    return { ...actual, loadFgb };
   });
 
   test("clipToOcean - feature inside of land feature should throw", async () => {

@@ -6,15 +6,19 @@ import {
   FeatureClipOperation,
   VectorDataSource,
   clipToPolygonFeatures,
+  Polygon,
+  MultiPolygon,
+  loadFgb,
 } from "@seasketch/geoprocessing";
 import { bbox } from "@turf/turf";
+import project from "../../project/projectClient.js";
 
 /**
  * Preprocessor takes a Polygon feature/sketch and returns the portion that
  * is in the ocean (not on land) and within one or more EEZ boundaries.
  */
 export async function clipToOceanEez(
-  feature: Feature | Sketch,
+  feature: Feature | Sketch
 ): Promise<Feature> {
   // throws if not valid with specific message
   ensureValidPolygon(feature, {
@@ -28,25 +32,33 @@ export async function clipToOceanEez(
 
   // Erase portion of sketch over land
 
-  const landDatasource = new VectorDataSource(
-    "https://d3p1dsef9f0gjr.cloudfront.net/",
+  const landDs = project.getInternalVectorDatasourceById(
+    "global-coastline-daylight-v158"
   );
-  const landFC = await landDatasource.fetchUnion(featureBox, "gid");
+  const landUrl = project.getDatasourceUrl(landDs);
+  const landFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
+    landUrl,
+    featureBox
+  );
   const eraseLand: FeatureClipOperation = {
     operation: "difference",
-    clipFeatures: landFC.features,
+    clipFeatures: landFeatures,
   };
 
   // Keep portion of sketch within EEZ
 
-  const eezDatasource = new VectorDataSource(
-    "https://d3muy0hbwp5qkl.cloudfront.net",
+  const eezDs = project.getInternalVectorDatasourceById(
+    "global-eez-mr-v12-subdivided"
   );
-  const eezFC = await eezDatasource.fetchUnion(featureBox, "UNION");
+  const eezUrl = project.getDatasourceUrl(eezDs);
+  const eezFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
+    eezUrl,
+    featureBox
+  );
   // Optionally filter to single EEZ polygon by UNION name
   const keepInsideEez: FeatureClipOperation = {
     operation: "intersection",
-    clipFeatures: eezFC.features,
+    clipFeatures: eezFeatures,
   };
 
   return clipToPolygonFeatures(feature, [eraseLand, keepInsideEez], {

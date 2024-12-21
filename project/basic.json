@@ -5,6 +5,9 @@
     180,
     90
   ],
+  "languages": [
+    "EN"
+  ],
   "planningAreaType": "other",
   "planningAreaId": "World",
   "planningAreaName": "World",
