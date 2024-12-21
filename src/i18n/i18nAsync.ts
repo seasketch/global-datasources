@@ -1,16 +1,14 @@
 import { createInstance } from "i18next";
 import { initReactI18next } from "react-i18next";
-import extraTerms from "./extraTerms.json";
-import languages from "./supported";
+import extraTerms from "./extraTerms.json" with { type: "json" };
+import languages from "./languages.json" with { type: "json" };
 
 const defaultLang = "en";
 
 /**
- * Returns an instance of i18n that lazy loads translations using dynamic
- * import from passed langPath, defaults to './lang' which gp projects will
- * have by default.  This function will save bandwidth if there
- * are lots of translations and languages to support, but it takes time
- * to load and is more sophisticated, using a webpack magic chunk comment.
+ * Returns an instance of i18n that lazy loads translations using passed langPath,
+ * defaults to './lang' which gp projects will have by default.
+ * JSON language modules are bundled using Vite's glob import.
  *
  * Each call to this function returns an independent instance allowing
  * for multiple instances of i18n to be used in the same application.
@@ -28,64 +26,90 @@ export function createI18nAsyncInstance(
     langPath?: string;
     /** path to extra base language translations (for gp projects), which langPath strings merge with and override */
     baseLangPath?: string;
-  } = {}
+  } = {},
 ) {
   const { langPath = "./lang", baseLangPath = "./baseLang" } = options;
   const instance = createInstance();
+
+  const baseLangModules = import.meta.glob(`./baseLang/*/translation.json`, {
+    query: "raw",
+  });
+  const langModules = import.meta.glob(`./lang/*/translation.json`, {
+    query: "raw",
+  });
+
   instance
     .use({
       type: "backend",
       read(
         language: string,
         namespace: string,
-        callback: (errorValue: unknown, translations: null | any) => void
+        callback: (errorValue: unknown, translations: null | any) => void,
       ) {
         const curLanguage = ((language: string) => {
           // language switcher sends zh when zh-Hans is selected, but we need zh-Hans
           if (language === "zh") return "zh-Hans";
 
           return languages.find(
-            (curLang) => curLang.code.toLowerCase() === language.toLowerCase()
+            (curLang) => curLang.code.toLowerCase() === language.toLowerCase(),
           )?.code;
         })(language);
 
         const isDefault =
           language.toLowerCase() === "en" || /en-/i.test(language);
+
+        const langToLoad = isDefault ? defaultLang : curLanguage;
+
         (async () => {
           // Load translations
           let baseLangResources = {};
           try {
-            baseLangResources = await import(
-              /* webpackChunkName: "baseLang" */ `${baseLangPath}/${
-                isDefault ? defaultLang : curLanguage
-              }/${namespace}.json`
-            );
-          } catch (error: unknown) {
-            console.info(
-              `Warning: failed to find base lang resource.  If this is not a gp project, then this is expected.`
-            );
+            if (isDefault) {
+              // Do not load if default language, let components render strings directly
+              baseLangResources = {};
+            } else {
+              const baseLangToLoadPath = `${baseLangPath}/${langToLoad}/${namespace}.json`;
+              const curModule = baseLangModules[baseLangToLoadPath];
+              baseLangResources = JSON.parse(
+                ((await curModule()) as unknown as any).default,
+              );
+            }
+          } catch {
+            console.info(`Warning: failed to find base lang resource.`);
           }
-          //console.log("baseLangResources", baseLangResources);
+          // console.log("language baseLangResources", baseLangResources);
 
           let langResources = {};
           if (langPath !== undefined) {
-            langResources = await import(
-              /* webpackChunkName: "localLang" */ `${langPath}/${
-                isDefault ? defaultLang : curLanguage
-              }/${namespace}.json`
-            );
+            try {
+              if (isDefault) {
+                // Do not load if default language, let components render strings directly
+                langResources = {};
+              } else {
+                const langToLoadPath = `${langPath}/${langToLoad}/${namespace}.json`;
+                console.log("language langToLoadPath", langToLoadPath);
+                const curModule = langModules[langToLoadPath];
+                langResources = JSON.parse(
+                  ((await curModule()) as unknown as any).default,
+                );
+              }
+            } catch {
+              console.info(`Warning: failed to find lang resource.`);
+            }
           }
-          //console.log("langResources", langResources);
+          // console.log("language langResources", langResources);
+          // console.log("language extraTerms", extraTerms);
 
           // Return merged translations
-          if (defaultLang) {
-            // merge in plurals if english, because extractor leaves them blank, so they are managed specially
+          if (isDefault) {
+            // merge in extraTerms if english
             callback(null, {
               ...baseLangResources,
               ...langResources,
               ...extraTerms,
             });
           } else {
+            // otherwise extra terms should already be translated in langResources
             callback(null, {
               ...baseLangResources,
               ...langResources,

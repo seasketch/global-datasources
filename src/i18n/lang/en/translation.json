@@ -1,5 +1,7 @@
 {
-  "SizeCard sketch size message": "This sketch is <2>{{area}}</2> square kilometers",
-  "SizeCard title": "Zone Size",
-  "Viability": "Viability"
+  "Overview": "Overview",
+  "SimpleCard sketch size message": "This {{sketchStr}} is {{areaString}} square kilometers.",
+  "SimpleCard title": "Simple Report",
+  "sketch": "sketch",
+  "sketch collection": "sketch collection"
 }
