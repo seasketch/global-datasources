@@ -1,5 +1,27 @@
 [
-
+  {
+    "datasourceId": "world",
+    "geo_type": "vector",
+    "formats": [
+      "fgb"
+    ],
+    "precalc": true,
+    "metadata": {
+      "name": "World Outline Polygon",
+      "description": "World polygon for default project geography in seasketch geoprocessing proejcts",
+      "version": "1.0",
+      "publisher": "SeaSketch",
+      "publishDate": "20231018",
+      "publishLink": ""
+    },
+    "layerName": "world",
+    "classKeys": [],
+    "created": "2023-10-05T00:00:00Z",
+    "lastUpdated": "2024-12-22T02:21:27.326Z",
+    "src": "data/default/world.json",
+    "propertiesToKeep": [],
+    "explodeMulti": true
+  },
   {
     "datasourceId": "global-eez-mr-v12",
     "geo_type": "vector",

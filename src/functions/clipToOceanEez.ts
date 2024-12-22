@@ -48,7 +48,7 @@ export async function clipToOceanEez(
   // Keep portion of sketch within EEZ
 
   const eezDs = project.getInternalVectorDatasourceById(
-    "global-eez-mr-v12-subdivided"
+    "global-eez-land-union-mr-v4"
   );
   const eezUrl = project.getDatasourceUrl(eezDs);
   const eezFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
