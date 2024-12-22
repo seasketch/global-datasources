@@ -1,5 +1,5 @@
 {
-  "name": "global-datasources-new",
+  "name": "global-datasources",
   "version": "4.0.0",
   "description": "Publish global datasources for use in seasketch geoprocessing projects",
   "private": false,
