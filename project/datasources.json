@@ -133,26 +133,6 @@
     "explodeMulti": true
   },
   {
-    "datasourceId": "global-land-osm",
-    "geo_type": "vector",
-    "formats": [
-      "subdivided"
-    ],
-    "precalc": false,
-    "metadata": {
-      "name": "OSM Land Polygons WGS84 (Deprecated)",
-      "description": "OSM Land Polygons WGS84. This is does not represent official baseline, consult with partners on official boundary",
-      "version": "20230926",
-      "publisher": "OpenStreetMap Deutschland",
-      "publishDate": "20230926",
-      "publishLink": "https://osmdata.openstreetmap.de/data/land-polygons.html"
-    },
-    "idProperty": "gid",
-    "layerName": "land_polygons",
-    "classKeys": [],
-    "url": "https://d13jpx95dhfvtv.cloudfront.net"
-  },
-  {
     "datasourceId": "global-coastline-daylight-v158",
     "geo_type": "vector",
     "formats": [
