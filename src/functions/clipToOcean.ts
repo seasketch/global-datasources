@@ -4,13 +4,16 @@ import {
   Sketch,
   clipToPolygonFeatures,
   FeatureClipOperation,
-  VectorDataSource,
   ensureValidPolygon,
   Polygon,
   MultiPolygon,
   loadFgb,
+  isPolygonFeature,
+  ValidationError,
+  clip,
+  biggestPolygon,
 } from "@seasketch/geoprocessing";
-import { bbox } from "@turf/turf";
+import { area, bbox, featureCollection } from "@turf/turf";
 import project from "../../project/projectClient.js";
 
 /**
@@ -18,6 +21,10 @@ import project from "../../project/projectClient.js";
  * is in the ocean (not on land). If results in multiple polygons then returns the largest.
  */
 export async function clipToOcean(feature: Feature | Sketch): Promise<Feature> {
+  if (!isPolygonFeature(feature)) {
+    throw new ValidationError("Input must be a polygon");
+  }
+
   // throws if not valid with specific message
   ensureValidPolygon(feature, {
     minSize: 1,
@@ -38,15 +45,19 @@ export async function clipToOcean(feature: Feature | Sketch): Promise<Feature> {
     featureBox
   );
 
-  const eraseLand: FeatureClipOperation = {
-    operation: "difference",
-    clipFeatures: landFeatures,
-  };
+  // Erase portion of sketch over land
 
-  // Execute one or more clip operations in order against feature
-  return clipToPolygonFeatures(feature, [eraseLand], {
-    ensurePolygon: true,
-  });
+  let clipped: Feature<Polygon | MultiPolygon> | null = feature;
+  if (clipped !== null && landFeatures.length > 0) {
+    clipped = clip(featureCollection([clipped, ...landFeatures]), "difference");
+  }
+
+  if (!clipped || area(clipped) === 0) {
+    throw new ValidationError("Feature is not in the ocean");
+  }
+
+  // Assume user wants the largest polygon if multiple remain
+  return biggestPolygon(clipped);
 }
 
 export default new PreprocessingHandler(clipToOcean, {

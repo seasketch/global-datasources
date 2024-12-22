@@ -67,7 +67,7 @@ describe("clipToOcean", () => {
       await clipToOcean(insideLand);
     } catch (error: unknown) {
       if (error instanceof Error) {
-        expect(error.message).toBe("Feature is outside of boundary");
+        expect(error.message).toBe("Feature is not in the ocean");
         return;
       }
     }

@@ -4,13 +4,16 @@ import {
   Sketch,
   ensureValidPolygon,
   FeatureClipOperation,
-  VectorDataSource,
-  clipToPolygonFeatures,
   Polygon,
   MultiPolygon,
   loadFgb,
+  clip,
+  clipMultiMerge,
+  ValidationError,
+  isPolygonFeature,
+  biggestPolygon,
 } from "@seasketch/geoprocessing";
-import { bbox } from "@turf/turf";
+import { area, bbox, featureCollection } from "@turf/turf";
 import project from "../../project/projectClient.js";
 
 /**
@@ -20,6 +23,10 @@ import project from "../../project/projectClient.js";
 export async function clipToOceanEez(
   feature: Feature | Sketch
 ): Promise<Feature> {
+  if (!isPolygonFeature(feature)) {
+    throw new ValidationError("Input must be a polygon");
+  }
+
   // throws if not valid with specific message
   ensureValidPolygon(feature, {
     minSize: 1,
@@ -30,7 +37,7 @@ export async function clipToOceanEez(
 
   const featureBox = bbox(feature);
 
-  // Erase portion of sketch over land
+  // Get features from land and eez datasources
 
   const landDs = project.getInternalVectorDatasourceById(
     "global-coastline-daylight-v158"
@@ -40,12 +47,6 @@ export async function clipToOceanEez(
     landUrl,
     featureBox
   );
-  const eraseLand: FeatureClipOperation = {
-    operation: "difference",
-    clipFeatures: landFeatures,
-  };
-
-  // Keep portion of sketch within EEZ
 
   const eezDs = project.getInternalVectorDatasourceById(
     "global-eez-land-union-mr-v4"
@@ -55,15 +56,34 @@ export async function clipToOceanEez(
     eezUrl,
     featureBox
   );
-  // Optionally filter to single EEZ polygon by UNION name
-  const keepInsideEez: FeatureClipOperation = {
-    operation: "intersection",
-    clipFeatures: eezFeatures,
-  };
 
-  return clipToPolygonFeatures(feature, [eraseLand, keepInsideEez], {
-    ensurePolygon: true,
-  });
+  // Erase portion of sketch over land
+
+  let clipped: Feature<Polygon | MultiPolygon> | null = feature;
+  if (clipped !== null && landFeatures.length > 0) {
+    clipped = clip(featureCollection([clipped, ...landFeatures]), "difference");
+  }
+
+  // Keep portion of sketch within EEZ
+
+  if (eezFeatures.length === 0) {
+    clipped = null; // No land to clip to, intersection is empty
+  }
+
+  if (clipped !== null) {
+    clipped = clipMultiMerge(
+      clipped,
+      featureCollection(eezFeatures),
+      "intersection"
+    );
+  }
+
+  if (!clipped || area(clipped) === 0) {
+    throw new ValidationError("Feature is outside of EEZ boundary");
+  }
+
+  // Assume user wants the largest polygon if multiple remain
+  return biggestPolygon(clipped);
 }
 
 export default new PreprocessingHandler(clipToOceanEez, {

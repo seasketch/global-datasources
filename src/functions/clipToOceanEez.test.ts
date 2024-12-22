@@ -87,7 +87,7 @@ describe("clipToOceanEez", () => {
       await clipToOceanEez(insideLand);
     } catch (error: unknown) {
       if (error instanceof Error) {
-        expect(error.message).toBe("Feature is outside of boundary");
+        expect(error.message).toBe("Feature is outside of EEZ boundary");
         return;
       }
     }
@@ -99,7 +99,7 @@ describe("clipToOceanEez", () => {
       await clipToOceanEez(outsideEez);
     } catch (error: unknown) {
       if (error instanceof Error) {
-        expect(error.message).toBe("Feature is outside of boundary");
+        expect(error.message).toBe("Feature is outside of EEZ boundary");
         return;
       }
     }
