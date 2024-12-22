@@ -1,110 +1,73 @@
 
 # Global Datasources
 
-Listing of global datasource for use in SeaSketch projects
+Listing of datasources published by this project for use in SeaSketch projects
 
-## World Outline Polygon
 
-World polygon for default project geography in seasketch geoprocessing proejcts
+To re-generate this README file run `npx tsx scripts/datasourcesToDocs.ts`
+## World EEZ Polygons v12
 
-- Datasource ID: world
-- Version: 1.0
-- Publisher: SeaSketch
-- Publish Date: 20231018
-- Source: []()
-- Formats: [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.json) | [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.fgb)
-- Feature ID property: 
-- Feature name property: N/A
-
-## World EEZ v12
-
-World EEZ boundaries and disputed areas
+World EEZ boundary and disputed area polygons v12. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be
 
 - Datasource ID: global-eez-mr-v12
 - Version: 12.0
 - Publisher: Flanders Marine Institute (VLIZ)
 - Publish Date: 20231025
 - Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12.json)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12.fgb](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v12.fgb)
 - Feature ID property: GEONAME
 - Feature name property: GEONAME
 
-## World EEZ v11 (deprecated)
+## World EEZ With Country Boundaries v4
 
-World EEZ boundaries and disputed areas
+The union of EEZ's with world country boundaries. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be
 
-- Datasource ID: global-eez-mr-v11
-- Version: 11.0
+- Datasource ID: global-eez-land-union-mr-v4
+- Version: 4.0
 - Publisher: Flanders Marine Institute (VLIZ)
-- Publish Date: 2019118
+- Publish Date: 20241010
 - Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v11.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-mr-v11.json)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
-
-## World EEZ With Land Zones v3
-
-The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses
-
-- Datasource ID: global-eez-with-land-mr-v3
-- Version: 3.0
-- Publisher: Flanders Marine Institute (VLIZ)
-- Publish Date: 20200317
-- Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-with-land-mr-v3.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-with-land-mr-v3.json)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-eez-land-union-mr-v4.fgb](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-eez-land-union-mr-v4.fgb)
 - Feature ID property: UNION
 - Feature name property: UNION
 
 ## World 12 Nautical Miles Zone (Territorial Seas) v4
 
-
+Created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be
 
 - Datasource ID: global-eez-12nm-mr-v4
 - Version: 4.0
 - Publisher: Flanders Marine Institute (VLIZ)
 - Publish Date: 20231018
 - Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v4.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v4.json)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v4.fgb](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v4.fgb)
 - Feature ID property: GEONAME
 - Feature name property: GEONAME
 
-## World 12 Nautical Miles Zone (Territorial Seas) v3 (deprecated)
+## OSM Land Polygons WGS84 (Deprecated)
 
-
-
-- Datasource ID: global-eez-12nm-mr-v3
-- Version: 3.0
-- Publisher: Flanders Marine Institute (VLIZ)
-- Publish Date: 2019118
-- Source: [https://marineregions.org/](https://marineregions.org/)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v3.fgb) | [json](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-eez-12nm-mr-v3.json)
-- Feature ID property: GEONAME
-- Feature name property: GEONAME
-
-## OSM Land Polygons WGS84 split
-
-OSM Land Polygons WGS84, pre-split into grid tiles
-
-- Datasource ID: global-land-grid-osm
-- Version: 20230925
-- Publisher: OpenStreetMap Deutschland
-- Publish Date: 20230925
-- Source: [https://osmdata.openstreetmap.de/data/land-polygons.html](https://osmdata.openstreetmap.de/data/land-polygons.html)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/global-land-grid-osm.fgb)
-- Feature ID property: gid
-- Feature name property: N/A
-
-## OSM Land Polygons WGS84
-
-OSM Land Polygons WGS84
+OSM Land Polygons WGS84. This is does not represent official baseline, consult with partners on official boundary
 
 - Datasource ID: global-land-osm
 - Version: 20230926
 - Publisher: OpenStreetMap Deutschland
 - Publish Date: 20230926
 - Source: [https://osmdata.openstreetmap.de/data/land-polygons.html](https://osmdata.openstreetmap.de/data/land-polygons.html)
-- Formats: [subdivided](https://d13jpx95dhfvtv.cloudfront.net)
+- URL: [https://d13jpx95dhfvtv.cloudfront.net](https://d13jpx95dhfvtv.cloudfront.net)
 - Feature ID property: gid
+- Feature name property: N/A
+
+## Daylight Map Coastline Polygons v1.58
+
+Daylight map distribution v1.58 coastline land polygons.  This is does not represent official baseline, consult with partners on official boundary
+
+- Datasource ID: global-coastline-daylight-v158
+- Version: 1.58
+- Publisher: Meta
+- Publish Date: 20241112
+- Source: [https://daylightmap.org/](https://daylightmap.org/)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-coastline-daylight-v158.fgb](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/global-coastline-daylight-v158.fgb)
+- Feature ID property: FID
 - Feature name property: N/A
 
 ## BioOracle Present Day Surface pH
@@ -116,7 +79,7 @@ BioOracle Present Day Surface pH global raster
 - Publisher: BioOracle
 - Publish Date: 2021-09-24
 - Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
-- Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-ph.tif)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-ph.tif](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-ph.tif)
 
 ## BioOracle Present Day Surface Temperature Maximum
 
@@ -127,7 +90,7 @@ BioOracle Present Day Surface Temperature Maximum global raster
 - Publisher: BioOracle
 - Publish Date: 2021-09-24
 - Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
-- Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-max.tif)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-max.tif](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-max.tif)
 
 ## BioOracle Present Day Surface Temperature Minimum
 
@@ -138,7 +101,7 @@ BioOracle Present Day Surface Temperature Minimum global raster
 - Publisher: BioOracle
 - Publish Date: 2021-09-24
 - Source: [https://www.bio-oracle.org/](https://www.bio-oracle.org/)
-- Formats: [tif](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-min.tif)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-min.tif](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/bo-present-surface-temp-min.tif)
 
 ## Marine Ecoregions of the World
 
@@ -149,6 +112,6 @@ A biogeographic classification of the world's coastal and continental shelf wate
 - Publisher: The Nature Conservancy
 - Publish Date: 20190911
 - Source: [https://tnc.maps.arcgis.com/home/item.html?id=ed2be4cf8b7a451f84fd093c2e7660e3](https://tnc.maps.arcgis.com/home/item.html?id=ed2be4cf8b7a451f84fd093c2e7660e3)
-- Formats: [fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/meow-ecos.fgb)
+- URL: [https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/meow-ecos.fgb](https://gp-global-datasources-new-datasets.s3.us-west-1.amazonaws.com/meow-ecos.fgb)
 - Feature ID property: ECOREGION
 - Feature name property: ECOREGION
