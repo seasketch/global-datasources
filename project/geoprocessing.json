@@ -1,0 +1,13 @@
+{
+  "author": "Tim Welch <tim.j.welch@gmail.com>",
+  "organization": "SeaSketch",
+  "region": "us-west-1",
+  "clients": [],
+  "preprocessingFunctions": [
+    "src/functions/validatePolygon.ts",
+    "src/functions/clipToLand.ts",
+    "src/functions/clipToOcean.ts",
+    "src/functions/clipToOceanEez.ts"
+  ],
+  "geoprocessingFunctions": []
+}

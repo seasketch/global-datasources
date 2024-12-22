@@ -1,7 +1,6 @@
 # Contributing
 
-After updating datasources.json update the README with:
-
+To regenerate the readme run:
 ```bash
-npx ts-node scripts/datasourcesToDocs.ts
+npx tsx scripts/datasourcesToDocs.ts
 ```

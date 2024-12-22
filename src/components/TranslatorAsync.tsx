@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
 import { I18nextProvider } from "react-i18next";
-import { createI18nAsyncInstance } from "../i18n/i18nAsync";
+import { createI18nAsyncInstance } from "../i18n/i18nAsync.js";
 import { useLanguage } from "@seasketch/geoprocessing/client-ui";
 
 // Load translations and pass to react-i18next
@@ -18,6 +18,7 @@ export const Translator: React.FunctionComponent<{
   // useEffect used to avoid react warning about changing state during render
   // https://github.com/i18next/react-i18next/issues/1124
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     i18nInstance.language !== language && i18nInstance.changeLanguage(language);
   }, [language]);
 
