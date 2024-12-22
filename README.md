@@ -11,3 +11,5 @@ Vector datasources are subdivided into smaller pieces and published in flatgeobu
 Raster datasources are published as cloud-optimized GeoTIFF files format for efficient fetching of subsets of the data.
 
 The easiest way to explore these datasources is to load them in QGIS using the provided URL.  It is important that you zoom in to your area of interest before loading each layer, to avoid it needing to download the entire datasource.  The use of cloud-optimized formats makes this possible.
+
+QGIS will also allow you to export a subset of these datasources by first selecting individual features (vector) or selecting a smaller bounding box extent (raster).
