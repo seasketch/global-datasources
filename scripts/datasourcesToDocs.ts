@@ -5,13 +5,11 @@ import { isVectorDatasource } from "@seasketch/geoprocessing";
 
 // Generate README.md for project from datasources.json
 
-const outfile = `${import.meta.dirname}/../README.md`;
+const outfile = `${import.meta.dirname}/../DATASOURCES.md`;
 
 let out = "";
 
-out += `\n# Global Datasources\n\n`;
-out += `![cover image](./img/multi-layer-view.png)`;
-out += `Global datasources published for use in SeaSketch geoprocessing projects\n`;
+out += `\n# Datasources\n\n`;
 
 const dsMds = project.datasources.forEach((ds) => {
   out += `\n## ${ds.metadata?.name}\n\n`;
