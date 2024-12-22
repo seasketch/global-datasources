@@ -1,27 +1,5 @@
 [
-  {
-    "datasourceId": "world",
-    "geo_type": "vector",
-    "formats": [
-      "fgb"
-    ],
-    "precalc": true,
-    "metadata": {
-      "name": "World Outline Polygon",
-      "description": "World polygon for default project geography in seasketch geoprocessing proejcts",
-      "version": "1.0",
-      "publisher": "SeaSketch",
-      "publishDate": "20231018",
-      "publishLink": ""
-    },
-    "layerName": "world",
-    "classKeys": [],
-    "created": "2023-10-05T00:00:00Z",
-    "lastUpdated": "2024-06-10T19:57:25.521Z",
-    "src": "data/default/world.json",
-    "propertiesToKeep": [],
-    "explodeMulti": true
-  },
+
   {
     "datasourceId": "global-eez-mr-v12",
     "geo_type": "vector",
@@ -30,36 +8,8 @@
     ],
     "precalc": false,
     "metadata": {
-      "name": "World EEZ v12",
-      "description": "World EEZ boundaries and disputed areas",
-      "version": "12.0",
-      "publisher": "Flanders Marine Institute (VLIZ)",
-      "publishDate": "20231025",
-      "publishLink": "https://marineregions.org/"
-    },
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME",
-    "layerName": "eez_v12",
-    "classKeys": [],
-    "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2024-12-21T01:23:38.260Z",
-    "src": "data/src/World_EEZ_v12_20231025/eez_v12.shp",
-    "propertiesToKeep": [
-      "GEONAME",
-      "MRGID"
-    ],
-    "explodeMulti": true
-  },
-  {
-    "datasourceId": "global-eez-mr-v12-subdivided",
-    "geo_type": "vector",
-    "formats": [
-      "fgb"
-    ],
-    "precalc": false,
-    "metadata": {
-      "name": "World EEZ v12 Subdivided",
-      "description": "World EEZ boundaries and disputed areas",
+      "name": "World EEZ Polygons v12",
+      "description": "World EEZ boundary and disputed area polygons v12. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be",
       "version": "12.0",
       "publisher": "Flanders Marine Institute (VLIZ)",
       "publishDate": "20231025",
@@ -70,7 +20,7 @@
     "layerName": "global-eez-mr-v12-subdivided",
     "classKeys": [],
     "created": "2024-12-21T01:23:38.260Z",
-    "lastUpdated": "2024-12-21T20:20:37.209Z",
+    "lastUpdated": "2024-12-22T01:41:43.162Z",
     "src": "data/src/World_EEZ_v12_20231025/global-eez-mr-v12-subdivided.fgb",
     "propertiesToKeep": [
       "GEONAME",
@@ -79,58 +29,56 @@
     "explodeMulti": true
   },
   {
-    "datasourceId": "global-eez-mr-v11",
+    "datasourceId": "global-eez-land-union-mr-v4",
     "geo_type": "vector",
     "formats": [
       "fgb"
     ],
     "precalc": false,
     "metadata": {
-      "name": "World EEZ v11 (deprecated)",
-      "description": "World EEZ boundaries and disputed areas",
-      "version": "11.0",
+      "name": "World EEZ With Country Boundaries v4",
+      "description": "The union of EEZ's with world country boundaries. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be",
+      "version": "4.0",
       "publisher": "Flanders Marine Institute (VLIZ)",
-      "publishDate": "2019118",
-      "publishLink": "https://marineregions.org/"
-    },
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME",
-    "layerName": "eez_v11",
-    "classKeys": [],
-    "created": "2023-09-19T01:13:16.233Z",
-    "lastUpdated": "2024-12-21T01:23:45.338Z",
-    "src": "data/src/World_EEZ_v11_20191118/eez_v11.shp",
-    "propertiesToKeep": [
-      "GEONAME",
-      "MRGID"
-    ],
-    "explodeMulti": true
-  },
-  {
-    "datasourceId": "global-eez-with-land-mr-v3",
-    "geo_type": "vector",
-    "formats": [
-      "fgb"
-    ],
-    "precalc": false,
-    "metadata": {
-      "name": "World EEZ With Land Zones v3",
-      "description": "The union of EEZ's with world country boundaries, specifically ESRI World Countries 2014 which seems to have been augmented further such as with bathymetry data to include additional land masses",
-      "version": "3.0",
-      "publisher": "Flanders Marine Institute (VLIZ)",
-      "publishDate": "20200317",
+      "publishDate": "20241010",
       "publishLink": "https://marineregions.org/"
     },
     "idProperty": "UNION",
     "nameProperty": "UNION",
-    "layerName": "EEZ_Land_v3_202030",
+    "layerName": "global-eez-land-union-mr-v4-subdivided",
     "classKeys": [],
-    "created": "2023-09-19T19:00:57.405Z",
-    "lastUpdated": "2024-12-21T01:23:46.029Z",
-    "src": "data/src/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp",
+    "created": "2024-12-22T00:00:00.000Z",
+    "lastUpdated": "2024-12-22T01:41:44.973Z",
+    "src": "data/src/EEZ_land_union_v4_202410/global-eez-land-union-mr-v4-subdivided.fgb",
     "propertiesToKeep": [
       "UNION",
-      "MRGID_EEZ"
+      "MRGID_EEZ",
+      "TERRITORY1",
+      "MRGID_TER1",
+      "ISO_TER1",
+      "UN_TER1",
+      "SOVEREIGN1",
+      "MRGID_SOV1",
+      "ISO_SOV1",
+      "UN_SOV1",
+      "TERRITORY2",
+      "MRGID_TER2",
+      "ISO_TER2",
+      "UN_TER2",
+      "SOVEREIGN2",
+      "MRGID_SOV2",
+      "ISO_SOV2",
+      "UN_SOV2",
+      "TERRITORY3",
+      "MRGID_TER3",
+      "ISO_TER3",
+      "UN_TER3",
+      "SOVEREIGN3",
+      "MRGID_SOV3",
+      "ISO_SOV3",
+      "UN_SOV3",
+      "POL_TYPE",
+      "AREA_KM2"
     ],
     "explodeMulti": true
   },
@@ -143,7 +91,7 @@
     "precalc": false,
     "metadata": {
       "name": "World 12 Nautical Miles Zone (Territorial Seas) v4",
-      "description": "",
+      "description": "Created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be",
       "version": "4.0",
       "publisher": "Flanders Marine Institute (VLIZ)",
       "publishDate": "20231018",
@@ -154,36 +102,8 @@
     "layerName": "eez_12nm_v4",
     "classKeys": [],
     "created": "2023-10-25T12:00:00Z",
-    "lastUpdated": "2024-12-21T01:23:47.161Z",
+    "lastUpdated": "2024-12-22T01:41:46.007Z",
     "src": "data/src/World_12NM_v4_20231025/eez_12nm_v4.shp",
-    "propertiesToKeep": [
-      "GEONAME",
-      "MRGID_EEZ"
-    ],
-    "explodeMulti": true
-  },
-  {
-    "datasourceId": "global-eez-12nm-mr-v3",
-    "geo_type": "vector",
-    "formats": [
-      "fgb"
-    ],
-    "precalc": false,
-    "metadata": {
-      "name": "World 12 Nautical Miles Zone (Territorial Seas) v3 (deprecated)",
-      "description": "",
-      "version": "3.0",
-      "publisher": "Flanders Marine Institute (VLIZ)",
-      "publishDate": "2019118",
-      "publishLink": "https://marineregions.org/"
-    },
-    "idProperty": "GEONAME",
-    "nameProperty": "GEONAME",
-    "layerName": "eez_12nm_v3",
-    "classKeys": [],
-    "created": "2023-09-19T01:41:11.791Z",
-    "lastUpdated": "2024-12-21T01:23:48.511Z",
-    "src": "data/src/World_12NM_v3_20191118/eez_12nm_v3.shp",
     "propertiesToKeep": [
       "GEONAME",
       "MRGID_EEZ"
@@ -198,8 +118,8 @@
     ],
     "precalc": false,
     "metadata": {
-      "name": "OSM Land Polygons WGS84",
-      "description": "OSM Land Polygons WGS84",
+      "name": "OSM Land Polygons WGS84 (Deprecated)",
+      "description": "OSM Land Polygons WGS84. This is does not represent official baseline, consult with partners on official boundary",
       "version": "20230926",
       "publisher": "OpenStreetMap Deutschland",
       "publishDate": "20230926",
@@ -219,7 +139,7 @@
     "precalc": false,
     "metadata": {
       "name": "Daylight Map Coastline Polygons v1.58",
-      "description": "Daylight map distribution v1.58 coastline land polygons",
+      "description": "Daylight map distribution v1.58 coastline land polygons.  This is does not represent official baseline, consult with partners on official boundary",
       "version": "1.58",
       "publisher": "Meta",
       "publishDate": "20241112",
@@ -229,7 +149,7 @@
     "layerName": "land_polygons",
     "classKeys": [],
     "created": "2024-12-21T12:00:00.000Z",
-    "lastUpdated": "2024-12-21T21:47:41.944Z",
+    "lastUpdated": "2024-12-22T01:42:53.145Z",
     "src": "data/src/daylight-158-coastlines/land_polygons.shp",
     "propertiesToKeep": [
       "FID"
@@ -255,7 +175,7 @@
     "band": 1,
     "noDataValue": -3.3999999521443642e+38,
     "created": "2023-12-11T11:55:31.053Z",
-    "lastUpdated": "2024-06-10T20:02:31.986Z",
+    "lastUpdated": "2024-12-22T01:42:54.328Z",
     "src": "data/src/BioOracle/Present.Surface.pH.BOv2_2.tif"
   },
   {
@@ -277,7 +197,7 @@
     "band": 1,
     "noDataValue": -1.7e+308,
     "created": "2023-12-11T11:56:47.117Z",
-    "lastUpdated": "2024-06-10T20:02:35.480Z",
+    "lastUpdated": "2024-12-22T01:42:56.236Z",
     "src": "data/src/BioOracle/Present.Surface.Temperature.Max.tif"
   },
   {
@@ -299,7 +219,7 @@
     "band": 1,
     "noDataValue": -1.7e+308,
     "created": "2023-12-11T11:58:59.485Z",
-    "lastUpdated": "2024-06-10T20:02:38.846Z",
+    "lastUpdated": "2024-12-22T01:42:58.088Z",
     "src": "/home/twelch/src/global-datasources/data/src/BioOracle/Present.Surface.Temperature.Min.tif"
   },
   {
@@ -322,7 +242,7 @@
     "layerName": "meow_ecos",
     "classKeys": [],
     "created": "2023-12-12T00:41:57.298Z",
-    "lastUpdated": "2024-06-10T20:02:39.045Z",
+    "lastUpdated": "2024-12-22T01:42:58.225Z",
     "src": "data/src/MEOW/meow_ecos.shp",
     "propertiesToKeep": [
       "ECOREGION",
