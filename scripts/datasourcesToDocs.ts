@@ -10,10 +10,8 @@ const outfile = `${import.meta.dirname}/../README.md`;
 let out = "";
 
 out += `\n# Global Datasources\n\n`;
-out += `Listing of datasources published by this project for use in SeaSketch projects\n`;
-
-out +=
-  "\n\nTo re-generate this README file run `npx tsx scripts/datasourcesToDocs.ts`";
+out += `![cover image](./img/multi-layer-view.png)`;
+out += `Global datasources published for use in SeaSketch geoprocessing projects\n`;
 
 const dsMds = project.datasources.forEach((ds) => {
   out += `\n## ${ds.metadata?.name}\n\n`;
