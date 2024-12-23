@@ -1,6 +1,6 @@
 # Global Datasources
 
-A set of global datasources published for use in SeaSketch geoprocessing projects.
+A set of global datasources published for use in SeaSketch [geoprocessing](https://seasketch.github.io/geoprocessing/) projects.
 
 [See full datasource list](./DATASOURCES.md)
 
@@ -31,7 +31,7 @@ You can now import this smaller flatgeobuf file into a geoprocessing project.
 * Add layer: Layer -> Add Layer -> Add Raster Layer -> Choose Protocol https -> Copy URL of TIF to URI field -> Add.
 
 To export a subset of polygons:
-* Raster menu -> Extraction -> Clip raster by extent -> Clipping extent menu click the dropdown -> Draw on map canvas -> draw the bounding box -> Leave as EPSG:6933 -> Click Run -> Close meny once complete
+* Raster menu -> Extraction -> Clip raster by extent -> Clipping extent menu click the dropdown -> Draw on map canvas -> draw the bounding box -> Leave as EPSG:6933 -> Click Run -> Close menu once complete
 * Right-click the new raster clip layer -> Export -> Save As -> GeoTiff.
 
 You can now import this smaller GeoTiff file into a geoprocessing project.
