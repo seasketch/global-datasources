@@ -1,6 +1,6 @@
 # Global Datasources
 
-A set of global datasources published for use in SeaSketch [geoprocessing](https://seasketch.github.io/geoprocessing/) projects.
+A set of global datasources published for use in SeaSketch [geoprocessing](https://seasketch.github.io/geoprocessing/) projects.  This project itself is a geoprocessing project, that uses only the data publishing feature.
 
 [See full datasource list](./DATASOURCES.md)
 
