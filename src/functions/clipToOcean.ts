@@ -37,12 +37,12 @@ export async function clipToOcean(feature: Feature | Sketch): Promise<Feature> {
 
   // Get land polygons - daylight osm land vector datasource
   const ds = project.getInternalVectorDatasourceById(
-    "global-coastline-daylight-v158"
+    "global-coastline-daylight-v158",
   );
   const url = project.getDatasourceUrl(ds);
   const landFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
     url,
-    featureBox
+    featureBox,
   );
 
   // Erase portion of sketch over land

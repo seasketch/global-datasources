@@ -39,12 +39,12 @@ export async function clipToLand(feature: Feature | Sketch): Promise<Feature> {
   // Get features from land datasource
 
   const ds = project.getInternalVectorDatasourceById(
-    "global-coastline-daylight-v158"
+    "global-coastline-daylight-v158",
   );
   const url = project.getDatasourceUrl(ds);
   const landFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
     url,
-    featureBox
+    featureBox,
   );
 
   // Keep portion of sketch over land
@@ -59,7 +59,7 @@ export async function clipToLand(feature: Feature | Sketch): Promise<Feature> {
     clipped = clipMultiMerge(
       clipped,
       featureCollection(landFeatures),
-      "intersection"
+      "intersection",
     );
   }
 

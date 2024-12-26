@@ -21,7 +21,7 @@ import project from "../../project/projectClient.js";
  * is in the ocean (not on land) and within one or more EEZ boundaries.
  */
 export async function clipToOceanEez(
-  feature: Feature | Sketch
+  feature: Feature | Sketch,
 ): Promise<Feature> {
   if (!isPolygonFeature(feature)) {
     throw new ValidationError("Input must be a polygon");
@@ -40,21 +40,21 @@ export async function clipToOceanEez(
   // Get features from land and eez datasources
 
   const landDs = project.getInternalVectorDatasourceById(
-    "global-coastline-daylight-v158"
+    "global-coastline-daylight-v158",
   );
   const landUrl = project.getDatasourceUrl(landDs);
   const landFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
     landUrl,
-    featureBox
+    featureBox,
   );
 
   const eezDs = project.getInternalVectorDatasourceById(
-    "global-eez-land-union-mr-v4"
+    "global-eez-land-union-mr-v4",
   );
   const eezUrl = project.getDatasourceUrl(eezDs);
   const eezFeatures: Feature<Polygon | MultiPolygon>[] = await loadFgb(
     eezUrl,
-    featureBox
+    featureBox,
   );
 
   // Erase portion of sketch over land
@@ -74,7 +74,7 @@ export async function clipToOceanEez(
     clipped = clipMultiMerge(
       clipped,
       featureCollection(eezFeatures),
-      "intersection"
+      "intersection",
     );
   }
 

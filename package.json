@@ -8,6 +8,14 @@
     "@seasketch/geoprocessing"
   ],
   "repositoryUrl": "https://github.com/seasketch/global-datasources",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seasketch/global-datasources.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seasketch/global-datasources/issues"
+  },
+  "homepage": "https://github.com/seasketch/global-datasources#readme",
   "author": "Tim Welch",
   "license": "BSD-3-Clause",
   "scripts": {
@@ -33,8 +41,8 @@
     "publish:data": "geoprocessing publish:data",
     "publish:translation": "npx tsx src/i18n/bin/publishTerms.ts",
     "reimport:data": "geoprocessing reimport:data",
-    "start:data": "http-server data/dist -c-1",
     "start:client": "geoprocessing start:client",
+    "start:data": "http-server data/dist -c-1",
     "storybook": "PROJECT_PATH=$(pwd) npx tsx .storybook/genReportStories.ts && storybook dev -p 6006 --no-open",
     "sync:translation": "npm run extract:translation && npm run publish:translation && npm run import:translation",
     "synth": "geoprocessing synth",
@@ -52,7 +60,7 @@
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
-    "@seasketch/geoprocessing": "7.0.0-experimental-preprocessor-update.7",
+    "@seasketch/geoprocessing": "7.0.0",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
@@ -63,6 +71,7 @@
     "@turf/turf": "7.1.0",
     "@types/request": "^2.48.12",
     "babel-plugin-i18next-extract": "0.10.0",
+    "geoblaze": "2.8.0",
     "geojson-antimeridian-cut": "^0.1.0",
     "globby": "^14.0.2",
     "husky": "^9.1.5",
@@ -70,20 +79,11 @@
     "prop-types": "^15.8.1",
     "react-i18next": "^15.0.1",
     "storybook": "^8.2.9",
+    "union-subdivided-polygons": "^0.9.1",
     "vite": "^5.4.2",
     "vitest": "^2.0.5",
     "vitest-fetch-mock": "^0.4.2",
-    "zx": "^8.1.5",
-    "geoblaze": "2.8.0",
-    "union-subdivided-polygons": "^0.9.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seasketch/global-datasources.git"
-  },
-  "homepage": "https://github.com/seasketch/global-datasources#readme",
-  "bugs": {
-    "url": "https://github.com/seasketch/global-datasources/issues"
+    "zx": "^8.1.5"
   },
   "devDependencies": {}
 }

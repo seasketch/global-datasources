@@ -22,7 +22,7 @@ const dsMds = project.datasources.forEach((ds) => {
   out += `- URL: ${ds.formats
     .map(
       (f) =>
-        `[${project.getDatasourceUrl(ds, { format: f })}](${project.getDatasourceUrl(ds, { format: f })})`
+        `[${project.getDatasourceUrl(ds, { format: f })}](${project.getDatasourceUrl(ds, { format: f })})`,
     )
     .join(" | ")}\n`;
   if (isVectorDatasource(ds)) {

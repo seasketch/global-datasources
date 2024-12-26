@@ -1,6 +1,6 @@
 # Global Datasources
 
-A set of global datasources published for use in SeaSketch [geoprocessing](https://seasketch.github.io/geoprocessing/) projects.  This project itself is a geoprocessing project, that uses only the data publishing feature.
+A set of global datasources published for use in SeaSketch [geoprocessing](https://seasketch.github.io/geoprocessing/) projects. This project itself is a geoprocessing project, that uses only the data publishing feature.
 
 [See full datasource list](./DATASOURCES.md)
 
@@ -16,22 +16,24 @@ If you don't want to download an entire datasource to explore it, or if you want
 
 ### Vector Datasources
 
-* Zoom in to your area of interest on the map. Doing this first will avoid downloading the whole dataset because your map extent is set to the whole world.
-* Add layer: Layer -> Add Layer -> Add Vector Layer -> Choose Protocol https -> Copy URL of FGB to URI field -> Add.
+- Zoom in to your area of interest on the map. Doing this first will avoid downloading the whole dataset because your map extent is set to the whole world.
+- Add layer: Layer -> Add Layer -> Add Vector Layer -> Choose Protocol https -> Copy URL of FGB to URI field -> Add.
 
 To export a subset of polygons:
-* `Select Features By Area` and then click or draw a bounding box or `Select Features By Value` and find an attribute such as country name that will select exactly what you want.
-* Right-click the layer that you have features selected for in the Layer menu and then click Export -> Save selected features as -> Flatgeobuf -> enter filename and save.
+
+- `Select Features By Area` and then click or draw a bounding box or `Select Features By Value` and find an attribute such as country name that will select exactly what you want.
+- Right-click the layer that you have features selected for in the Layer menu and then click Export -> Save selected features as -> Flatgeobuf -> enter filename and save.
 
 You can now import this smaller flatgeobuf file into a geoprocessing project.
 
 ## Raster Datasources
 
-* Zoom in to your area of interest on the map. Doing this first will avoid downloading the whole dataset because your map extent is set to the whole world.
-* Add layer: Layer -> Add Layer -> Add Raster Layer -> Choose Protocol https -> Copy URL of TIF to URI field -> Add.
+- Zoom in to your area of interest on the map. Doing this first will avoid downloading the whole dataset because your map extent is set to the whole world.
+- Add layer: Layer -> Add Layer -> Add Raster Layer -> Choose Protocol https -> Copy URL of TIF to URI field -> Add.
 
 To export a subset of polygons:
-* Raster menu -> Extraction -> Clip raster by extent -> Clipping extent menu click the dropdown -> Draw on map canvas -> draw the bounding box -> Leave as EPSG:6933 -> Click Run -> Close menu once complete
-* Right-click the new raster clip layer -> Export -> Save As -> GeoTiff.
+
+- Raster menu -> Extraction -> Clip raster by extent -> Clipping extent menu click the dropdown -> Draw on map canvas -> draw the bounding box -> Leave as EPSG:6933 -> Click Run -> Close menu once complete
+- Right-click the new raster clip layer -> Export -> Save As -> GeoTiff.
 
 You can now import this smaller GeoTiff file into a geoprocessing project.

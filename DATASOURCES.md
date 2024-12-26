@@ -1,6 +1,4 @@
-
 # Datasources
-
 
 ## World Outline Polygon
 
@@ -12,12 +10,12 @@ World polygon for default project geography in seasketch geoprocessing proejcts
 - Publish Date: 20231018
 - Source: []()
 - URL: [https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.fgb](https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.fgb)
-- Feature ID property: 
+- Feature ID property:
 - Feature name property: N/A
 
 ## World EEZ Polygons v12
 
-World EEZ boundary and disputed area polygons v12. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be
+World EEZ boundary and disputed area polygons v12. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses. Consult with partners on what the authoritative boundary should be
 
 - Datasource ID: global-eez-mr-v12
 - Version: 12.0
@@ -30,7 +28,7 @@ World EEZ boundary and disputed area polygons v12. Outer 200 nautical mile bound
 
 ## World EEZ With Country Boundaries v4
 
-The union of EEZ's with world country boundaries. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be
+The union of EEZ's with world country boundaries. Outer 200 nautical mile boundary created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses. Consult with partners on what the authoritative boundary should be
 
 - Datasource ID: global-eez-land-union-mr-v4
 - Version: 4.0
@@ -43,7 +41,7 @@ The union of EEZ's with world country boundaries. Outer 200 nautical mile bounda
 
 ## World 12 Nautical Miles Zone (Territorial Seas) v4
 
-Created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses.  Consult with partners on what the authoritative boundary should be
+Created based on ESRI World Countries 2014 which seems to have been augmented further using bathymetry data to include additional land masses. Consult with partners on what the authoritative boundary should be
 
 - Datasource ID: global-eez-12nm-mr-v4
 - Version: 4.0
@@ -56,7 +54,7 @@ Created based on ESRI World Countries 2014 which seems to have been augmented fu
 
 ## Daylight Map Coastline Polygons v1.58
 
-Daylight map distribution v1.58 coastline land polygons.  This is does not represent official baseline, consult with partners on official boundary
+Daylight map distribution v1.58 coastline land polygons. This is does not represent official baseline, consult with partners on official boundary
 
 - Datasource ID: global-coastline-daylight-v158
 - Version: 1.58

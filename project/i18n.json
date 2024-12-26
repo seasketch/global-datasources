@@ -1,4 +1,1 @@
-{
-  "localNamespace": "translation",
-  "remoteContext": "global-datasources"
-}
+{ "localNamespace": "translation", "remoteContext": "global-datasources" }
